@@ -5,13 +5,16 @@ import "./Header.css";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isInitial, setIsInitial] = useState(true);
 
   const handleMenu = () => {
     setIsOpen(!isOpen);
+    setIsInitial(false);
   };
 
   const closeMenu = () => {
     setIsOpen(false);
+    setIsInitial(false);
   };
 
   return (
@@ -64,13 +67,16 @@ const Header = () => {
       </div>
       {isOpen && (
         <div
-          className="fixed z-40 top-0 left-0 h-screen w-screen bg-black opacity-40"
+          className="fixed z-40 top-0 left-0 h-screen w-screen bg-black opacity-40 sm:hidden"
           onClick={closeMenu}
         ></div>
       )}
       <div
-        className={`fixed z-50 top-0 ${
-          isOpen ? "animate-slide-in" : "animate-slide-out"
+        className={`fixed z-50 top-0 sm:hidden ${
+          isOpen && "animate-slide-in opacity-100"
+        }
+          ${!isOpen && !isInitial && "animate-slide-out opacity-0"}
+          ${!isOpen && isInitial && "opacity-0 hidden"}
         } h-screen w-1/2 bg-[rgb(251,252,254)] text-[rgb(19,17,32)] p-4`}
       >
         <ul className="flex flex-col items-start gap-4 mt-14 text-[rgb(19,17,32)]">
