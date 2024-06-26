@@ -1,27 +1,36 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import logo from "../assets/logo.svg";
 import "./Header.css";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isInitial, setIsInitial] = useState(true);
+  const openMenu = () => {
+    const menu = document.querySelector(".menu");
+    const menuBackdrop = document.querySelector(".menu-backdrop");
 
-  const handleMenu = () => {
-    setIsOpen(!isOpen);
-    setIsInitial(false);
+    menu.classList.remove("animate-slide-out");
+    menu.classList.add("animate-slide-in");
+
+    menu.classList.remove("hidden");
+    menuBackdrop.classList.remove("hidden");
   };
 
   const closeMenu = () => {
-    setIsOpen(false);
-    setIsInitial(false);
+    const menu = document.querySelector(".menu");
+    const menuBackdrop = document.querySelector(".menu-backdrop");
+
+    menu.classList.add("animate-slide-out");
+
+    setTimeout(() => {
+      menu.classList.add("hidden");
+      menuBackdrop.classList.add("hidden");
+    }, 500);
   };
 
   return (
     <header className="fixed top-2 left-0 right-auto z-30 w-full md:top-6">
       <div className="flex items-center justify-center gap-3 mx-auto px-6 w-full">
         <div
-          className="w-full relative rounded-full flex bg-[rgba(255, 255, 255, 0.4)] px-4 min-h-14 backdrop-blur-xl
+          className="mx-auto max-w-6xl w-full relative rounded-full flex bg-[rgba(255, 255, 255, 0.4)] px-4 min-h-14 backdrop-blur-xl
           items-center max-h-14 border border-[rgba(191,204,217,0.5)] 
           shadow-[0_0_1px_rgba(85,166,246,0.1),1px_1.5px_2px_-1px_rgba(85,166,246,0.15),4px_4px_12px_-2.5px_rgba(85,166,246,0.15)]"
         >
@@ -48,37 +57,28 @@ const Header = () => {
           </nav>
           <div
             className="p-3 h-full w-10 flex flex-col justify-between items-center cursor-pointer sm:hidden gap-1 ml-auto hover:bg-[rgba(85,166,246,0.3)] transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] rounded-xl"
-            onClick={handleMenu}
+            onClick={openMenu}
           >
             <div
               className="w-8 bg-[#0959AA] h-1 rounded-lg"
-              onClick={handleMenu}
+              onClick={openMenu}
             ></div>
             <div
               className="w-8 bg-[#0959AA] h-1 rounded-lg"
-              onClick={handleMenu}
+              onClick={openMenu}
             ></div>
             <div
               className="w-8 bg-[#0959AA] h-1 rounded-lg"
-              onClick={handleMenu}
+              onClick={openMenu}
             ></div>
           </div>
         </div>
       </div>
-      {isOpen && (
-        <div
-          className="fixed z-40 top-0 left-0 h-screen w-screen bg-black opacity-40 sm:hidden"
-          onClick={closeMenu}
-        ></div>
-      )}
       <div
-        className={`fixed z-50 top-0 sm:hidden ${
-          isOpen && "animate-slide-in opacity-100"
-        }
-          ${!isOpen && !isInitial && "animate-slide-out opacity-0"}
-          ${!isOpen && isInitial && "opacity-0 hidden"}
-        } h-screen w-1/2 bg-[rgb(251,252,254)] text-[rgb(19,17,32)] p-4`}
-      >
+        className="menu-backdrop fixed hidden z-40 top-0 left-0 h-screen w-screen bg-black opacity-40 "
+        onClick={closeMenu}
+      ></div>
+      <div className="menu fixed hidden z-50 top-0 right-0 h-screen w-1/2 bg-[rgb(251,252,254)] text-[rgb(19,17,32)] p-4">
         <ul className="flex flex-col items-start gap-4 mt-14 text-[rgb(19,17,32)]">
           <li>
             <Link to="/" onClick={closeMenu}>
