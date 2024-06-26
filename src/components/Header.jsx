@@ -31,7 +31,7 @@ const Header = () => {
     <header className="fixed top-2 left-0 right-auto z-30 w-full md:top-6">
       <div className="flex items-center justify-center gap-3 mx-auto px-6 w-full">
         <div
-          className="mx-auto max-w-6xl w-full relative rounded-full flex bg-[rgba(255, 255, 255, 0.4)] px-4 min-h-14 backdrop-blur-xl
+          className="mx-auto max-w-6xl w-full relative rounded-full flex bg-white bg-opacity-40 px-4 min-h-14 backdrop-blur-xl
           items-center max-h-14 border border-[rgba(191,204,217,0.5)] 
           shadow-[0_0_1px_rgba(85,166,246,0.1),1px_1.5px_2px_-1px_rgba(85,166,246,0.15),4px_4px_12px_-2.5px_rgba(85,166,246,0.15)]"
         >
@@ -79,9 +79,9 @@ const Header = () => {
         className="menu-backdrop fixed hidden z-40 top-0 left-0 h-screen w-screen bg-black opacity-40 "
         onClick={closeMenu}
       ></div>
-      <div className="menu fixed hidden z-50 top-0 right-0 h-screen w-1/2 bg-[rgb(251,252,254)] text-[rgb(19,17,32)] p-4">
+      <div className="menu fixed hidden z-50 top-0 right-0 h-screen w-1/2 bg-[rgb(251,252,254)] dark:bg-[rgb(18,27,33)] text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)] p-4">
         <ThemeButton />
-        <ul className="flex flex-col items-start gap-4 mt-14 text-[rgb(19,17,32)]">
+        <ul className="flex flex-col items-start gap-4 mt-14 text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)]">
           <li>
             <Link to="/" onClick={closeMenu}>
               Home

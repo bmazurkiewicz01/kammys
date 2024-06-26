@@ -39,7 +39,7 @@ const ThemeButton = () => {
   };
 
   return (
-    <div className="ml-auto w-max">
+    <div className="ml-auto w-max dark:outline-[rgba(156,204,252,0.1)] dark:border-solid dark:border-1 dark:shadow-[rgba(3,51,99,0.2)]">
       <input
         className="w-0 h-0 hidden dark_mode_input"
         type="checkbox"
