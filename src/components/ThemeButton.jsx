@@ -39,7 +39,7 @@ const ThemeButton = () => {
   };
 
   return (
-    <div>
+    <div className="ml-auto w-max">
       <input
         className="w-0 h-0 hidden dark_mode_input"
         type="checkbox"
