@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
+import ThemeButton from "./ThemeButton";
 import "./Header.css";
 
 const Header = () => {
@@ -79,6 +80,7 @@ const Header = () => {
         onClick={closeMenu}
       ></div>
       <div className="menu fixed hidden z-50 top-0 right-0 h-screen w-1/2 bg-[rgb(251,252,254)] text-[rgb(19,17,32)] p-4">
+        <ThemeButton />
         <ul className="flex flex-col items-start gap-4 mt-14 text-[rgb(19,17,32)]">
           <li>
             <Link to="/" onClick={closeMenu}>
