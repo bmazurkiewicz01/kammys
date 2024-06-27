@@ -24,3 +24,7 @@
 .dark_mode_label:active::after {
     width: 30px;
 }
+
+.disable-transitions {
+    transition: none !important;
+}
