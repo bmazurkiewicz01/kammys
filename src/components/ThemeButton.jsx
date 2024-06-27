@@ -22,9 +22,6 @@ const ThemeButton = ({ classList, onClick }) => {
     if (savedTheme === "dark") {
       document.documentElement.classList.add("dark");
       document.querySelector("body").classList.add("dark");
-      document.querySelectorAll(".dark_mode_input").forEach((input) => {
-        input.checked = true;
-      });
     }
   }, []);
 
@@ -43,21 +40,25 @@ const ThemeButton = ({ classList, onClick }) => {
     onClick && onClick(theme);
   };
 
+  const selectedTheme =
+    localStorage.getItem("theme") === "dark" ? "dark" : "light";
+
   return (
     <div
       className={`ml-auto w-max dark:outline-[rgba(156,204,252,0.1)] dark:border-solid dark:border-1 dark:shadow-[rgba(3,51,99,0.2)] ${
-        classList && classList
+        classList ? classList : ""
       }`}
     >
       <input
         className="w-0 h-0 hidden dark_mode_input"
         type="checkbox"
-        id={id} // Use the unique ID
+        id={id}
         onClick={toggleTheme}
+        defaultChecked={selectedTheme === "dark"}
       />
       <label
         className="w-[65px] h-[30px] relative block bg-[#ebebeb] rounded-full shadow-[inner-custom-light] cursor-pointer transition duration-300 dark_mode_label"
-        htmlFor={id} // Use the unique ID
+        htmlFor={id}
       >
         <Sun className="absolute w-[20px] top-[5px] left-[5px] fill-white transition duration-300 sun" />
         <Moon className="absolute w-[20px] top-[5px] left-[40px] fill-[#7e7e7e] transition duration-300 moon" />
