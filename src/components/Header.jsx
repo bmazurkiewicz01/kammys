@@ -7,6 +7,7 @@ import "./Header.css";
 
 const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState("up");
 
   const onThemeChange = (oldTheme) => {
     setIsDarkMode(oldTheme === "dark" ? false : true);
@@ -28,6 +29,28 @@ const Header = () => {
     menuBackdrop.classList.remove("hidden");
   };
 
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        setScrollDirection("down");
+      } else {
+        setScrollDirection("up");
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const closeMenu = () => {
     const menu = document.querySelector(".menu");
     const menuBackdrop = document.querySelector(".menu-backdrop");
@@ -41,7 +64,11 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-2 left-0 right-auto z-30 w-full md:top-6">
+    <header
+      className={`fixed h-[60px] top-2 left-0 right-auto z-30 w-full md:top-6 transition-transform duration-300 ${
+        scrollDirection === "down" ? "translate-y-[-84px]" : "translate-y-0"
+      }`}
+    >
       <div className="flex items-center justify-center gap-3 mx-auto px-6 w-full">
         <div
           className="mx-auto max-w-6xl w-full relative rounded-full flex bg-white bg-opacity-40 px-4 min-h-14 backdrop-blur-xl

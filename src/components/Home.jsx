@@ -15,78 +15,63 @@ const Home = () => {
 
 const products = [
   {
-    title: "Profesjonalne Przeprowadzki Gorzów",
-    link: "",
+    title: "Przeprowadzki Gorzów Wielkopolski",
     thumbnail: "hero/img1.jpg",
   },
   {
-    title: "Szybkie i Bezpieczne Przeprowadzki",
-    link: "",
+    title: "Szybkie i bezpieczne przeprowadzki",
     thumbnail: "hero/img2.jpg",
   },
   {
     title: "Kompleksowe Przeprowadzki Firm",
-    link: "",
     thumbnail: "hero/img3.jpg",
   },
   {
     title: "Transport Pianin i Fortepianów",
-    link: "",
     thumbnail: "hero/img4.jpg",
   },
   {
     title: "Przeprowadzki na Terenie Gorzowa",
-    link: "",
     thumbnail: "hero/img5.jpg",
   },
   {
     title: "Przeprowadzki Międzynarodowe",
-    link: "",
     thumbnail: "hero/img6.jpg",
   },
   {
     title: "Przeprowadzki z Ubezpieczeniem",
-    link: "",
     thumbnail: "hero/img7.jpg",
   },
   {
     title: "Transport Materiałów Budowlanych",
-    link: "",
     thumbnail: "hero/img8.jpg",
   },
   {
     title: "Przeprowadzki Bibliotek i Magazynów",
-    link: "",
     thumbnail: "hero/img9.jpg",
   },
   {
     title: "Przeprowadzki z Ekipa",
-    link: "",
     thumbnail: "hero/img10.jpg",
   },
   {
     title: "Transport Antyków i Delikatnych Przedmiotów",
-    link: "",
     thumbnail: "hero/img11.jpg",
   },
   {
     title: "Przeprowadzki Mieszkań i Domów",
-    link: "",
     thumbnail: "hero/img12.jpg",
   },
   {
     title: "Usługi Transportowe na Terenie Europy",
-    link: "",
     thumbnail: "hero/img13.jpg",
   },
   {
     title: "Bezpieczne Przeprowadzki Sprzętu AGD",
-    link: "",
     thumbnail: "hero/img14.jpg",
   },
   {
     title: "Przeprowadzki Sklepów i Biur",
-    link: "",
     thumbnail: "hero/img14.jpg",
   },
 ];
