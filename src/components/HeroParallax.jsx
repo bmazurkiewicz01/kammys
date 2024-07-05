@@ -95,7 +95,6 @@ HeroParallax.propTypes = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
-      link: PropTypes.string.isRequired,
       thumbnail: PropTypes.string.isRequired,
     })
   ).isRequired,
@@ -150,7 +149,6 @@ export const ProductCard = ({ product, translate }) => {
 ProductCard.propTypes = {
   product: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
     thumbnail: PropTypes.string.isRequired,
   }).isRequired,
   translate: PropTypes.instanceOf(MotionValue).isRequired,

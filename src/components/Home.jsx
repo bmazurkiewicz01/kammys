@@ -6,7 +6,7 @@ const Home = () => {
     <MainLayout>
       <section className="bg-gradient-to-b from-[#b4d5f9] to-white dark:from-[rgb(2,41,79)] dark:to-[rgba(9,14,16,0)] bg-no-repeat gradient-bg-size">
         <div className="pt-28 2xl:pt-0 3xl:pt-8">
-          <HeroParallax products={products} />;
+          <HeroParallax products={products} />
         </div>
       </section>
     </MainLayout>
