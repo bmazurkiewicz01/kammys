@@ -3,20 +3,11 @@ import { useEffect, useState } from "react";
 import darkLogo from "../assets/logo-dark.svg";
 import lightLogo from "../assets/logo.svg";
 import ThemeButton from "./ThemeButton";
+import PropTypes from "prop-types";
 import "./Header.css";
 
-const Header = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+const Header = ({ isDarkMode, onThemeChange }) => {
   const [scrollDirection, setScrollDirection] = useState("up");
-
-  const onThemeChange = (oldTheme) => {
-    setIsDarkMode(oldTheme === "dark" ? false : true);
-  };
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") === "dark";
-    setIsDarkMode(savedTheme);
-  }, []);
 
   const openMenu = () => {
     const menu = document.querySelector(".menu");
@@ -147,6 +138,11 @@ const Header = () => {
       </div>
     </header>
   );
+};
+
+Header.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired,
+  onThemeChange: PropTypes.func.isRequired,
 };
 
 export default Header;
