@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 import darkLogo from "../assets/logo-dark.svg";
 import lightLogo from "../assets/logo.svg";
 import PropTypes from "prop-types";
+import Canvas from "./Canvas";
 
-export default function Footer({ isDarkMode }) {
+const Footer = ({ isDarkMode, className }) => {
   return (
-    <footer>
+    <footer className={className}>
+      <Canvas isDarkMode={isDarkMode} />
       <div className="py-12 md:py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-12 gap-8 lg:gap-20 mb-8 md:mb-12">
@@ -247,8 +249,11 @@ export default function Footer({ isDarkMode }) {
       </div>
     </footer>
   );
-}
+};
 
 Footer.propTypes = {
   isDarkMode: PropTypes.bool.isRequired,
+  className: PropTypes.string,
 };
+
+export default Footer;

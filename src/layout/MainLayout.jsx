@@ -1,5 +1,4 @@
 import Header from "../components/Header";
-import Canvas from "../components/Canvas";
 import Footer from "../components/Footer";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
@@ -16,13 +15,13 @@ const MainLayout = ({ children }) => {
     const savedTheme = localStorage.getItem("theme") === "dark";
     setIsDarkMode(savedTheme);
   }, []);
+
   return (
-    <>
+    <div className="flex flex-col min-h-full">
       <Header isDarkMode={isDarkMode} onThemeChange={onThemeChange} />
       <main className="bg-[#fefeff] dark:bg-[#080f10]">{children}</main>
-      <Canvas isDarkMode={isDarkMode} />
-      <Footer isDarkMode={isDarkMode} />
-    </>
+      <Footer isDarkMode={isDarkMode} className="mt-auto" />
+    </div>
   );
 };
 
