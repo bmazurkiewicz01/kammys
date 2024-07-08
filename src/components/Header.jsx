@@ -56,7 +56,7 @@ const Header = ({ isDarkMode, onThemeChange }) => {
 
   return (
     <header
-      className={`fixed h-[60px] top-2 left-0 right-auto z-30 w-full md:top-6 transition-transform duration-300 ${
+      className={`fixed min-h-16 top-2 left-0 right-auto z-30 w-full md:top-6 transition-transform duration-300 ${
         scrollDirection === "down" ? "translate-y-[-84px]" : "translate-y-0"
       }`}
     >
@@ -72,18 +72,18 @@ const Header = ({ isDarkMode, onThemeChange }) => {
             className="w-12 h-auto cursor-pointer"
           />
           <nav className="hidden w-full sm:flex">
-            <ul className="flex items-center justify-start gap-3 flex-grow font-sans font-normal font text-[0.90rem] pl-3">
-              <li>
-                <Link to="/">Home</Link>
+            <ul className="flex items-center justify-start gap-0 flex-grow font-sans font-normal font text-[0.90rem] pl-6 text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)]">
+              <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full">
+                <Link to="/">Strona Główna</Link>
               </li>
-              <li>
-                <Link to="/o-nas">O nas</Link>
+              <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full">
+                <Link to="/oferta-przeprowadzki-transport">Oferta</Link>
               </li>
-              <li>
-                <Link to="/">Placeholder</Link>
+              <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full">
+                <Link to="/przeprowadzki">Przeprowadzki</Link>
               </li>
-              <li>
-                <Link to="/">Placeholder</Link>
+              <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full">
+                <Link to="/kontakt">Kontakt</Link>
               </li>
             </ul>
             <ThemeButton classList={"w-full ml-auto"} onClick={onThemeChange} />
@@ -114,24 +114,24 @@ const Header = ({ isDarkMode, onThemeChange }) => {
       <div className="menu fixed hidden z-50 top-0 right-0 h-screen w-1/2 bg-[rgb(251,252,254)] dark:bg-[rgb(18,27,33)] text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)] p-4">
         <ThemeButton onClick={onThemeChange} />
         <ul className="flex flex-col items-start gap-4 mt-14 text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)]">
-          <li>
+          <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full w-full">
             <Link to="/" onClick={closeMenu}>
-              Home
+              Strona Główna
             </Link>
           </li>
-          <li>
-            <Link to="/o-nas" onClick={closeMenu}>
-              O nas
+          <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full w-full">
+            <Link to="/oferta-przeprowadzki-transport" onClick={closeMenu}>
+              Oferta
             </Link>
           </li>
-          <li>
-            <Link to="/" onClick={closeMenu}>
-              Placeholder
+          <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full w-full">
+            <Link to="/przeprowadzki" onClick={closeMenu}>
+              Przeprowadzki
             </Link>
           </li>
-          <li>
-            <Link to="/" onClick={closeMenu}>
-              Placeholder
+          <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full w-full">
+            <Link to="/kontakt" onClick={closeMenu}>
+              Kontakt
             </Link>
           </li>
         </ul>
