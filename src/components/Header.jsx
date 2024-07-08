@@ -56,7 +56,7 @@ const Header = ({ isDarkMode, onThemeChange }) => {
 
   return (
     <header
-      className={`fixed h-[60px] top-2 left-0 right-auto z-30 w-full md:top-6 transition-transform duration-300 ${
+      className={`fixed min-h-16 top-2 left-0 right-auto z-30 w-full md:top-6 transition-transform duration-300 ${
         scrollDirection === "down" ? "translate-y-[-84px]" : "translate-y-0"
       }`}
     >

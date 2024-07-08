@@ -1,8 +1,26 @@
 import MainLayout from "../layout/MainLayout";
+import { useEffect, useState } from "react";
 
 const About = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const onThemeChange = (oldTheme) => {
+    setIsDarkMode(oldTheme === "dark" ? false : true);
+  };
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (!savedTheme) {
+      const userPrefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      setIsDarkMode(userPrefersDark ? true : false);
+    } else {
+      setIsDarkMode(savedTheme === "dark");
+    }
+  }, []);
   return (
-    <MainLayout>
+    <MainLayout isDarkMode={isDarkMode} onThemeChange={onThemeChange}>
       <section className="bg-gradient-to-b from-[#b4d5f9] to-white dark:from-[rgb(2,41,79)] dark:to-[rgba(9,14,16,0)] bg-no-repeat gradient-bg-size">
         <div className="pt-28 2xl:pt-[80px]">
           <h1>About page</h1>

@@ -1,28 +1,9 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
 import "./MainLayout.css";
 
-const MainLayout = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const onThemeChange = (oldTheme) => {
-    setIsDarkMode(oldTheme === "dark" ? false : true);
-  };
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (!savedTheme) {
-      const userPrefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
-      setIsDarkMode(userPrefersDark ? true : false);
-    } else {
-      setIsDarkMode(savedTheme === "dark");
-    }
-  }, []);
-
+const MainLayout = ({ isDarkMode, onThemeChange, children }) => {
   return (
     <div className="flex flex-col min-h-full">
       <Header isDarkMode={isDarkMode} onThemeChange={onThemeChange} />
@@ -33,6 +14,8 @@ const MainLayout = ({ children }) => {
 };
 
 MainLayout.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired,
+  onThemeChange: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
 };
 
