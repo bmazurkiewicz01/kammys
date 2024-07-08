@@ -22,27 +22,27 @@ const HeroParallax = ({ products }) => {
 
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 1000]),
-    springConfig
+    springConfig,
   );
   const translateXReverse = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, -1000]),
-    springConfig
+    springConfig,
   );
   const rotateX = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [15, 0]),
-    springConfig
+    springConfig,
   );
   const opacity = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
-    springConfig
+    springConfig,
   );
   const rotateZ = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [20, 0]),
-    springConfig
+    springConfig,
   );
   const translateY = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [-700, 200]),
-    springConfig
+    springConfig,
   );
 
   return (
@@ -96,7 +96,7 @@ HeroParallax.propTypes = {
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       thumbnail: PropTypes.string.isRequired,
-    })
+    }),
   ).isRequired,
 };
 
@@ -104,7 +104,7 @@ export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0 translate-y-[-125px]">
       <h1 className="text-2xl md:text-7xl font-bold text-[#111111] dark:text-white">
-        Profesjonalne <br /> Przeprowadzki Gorzów
+        Profesjonalne <br /> przeprowadzki i transport
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 text-[#111111] dark:text-neutral-200">
         Firma usługowa KAMMYS oferuje kompleksowe przeprowadzki oraz transport

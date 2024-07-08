@@ -12,7 +12,7 @@ const ThemeButton = ({ classList, onClick }) => {
     let savedTheme = localStorage.getItem("theme");
     if (!savedTheme) {
       const userPrefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
+        "(prefers-color-scheme: dark)",
       ).matches;
       setTheme(userPrefersDark ? "dark" : "light");
       localStorage.setItem("theme", userPrefersDark ? "dark" : "light");

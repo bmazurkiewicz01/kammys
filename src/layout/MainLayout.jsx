@@ -13,7 +13,14 @@ const MainLayout = ({ children }) => {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") === "dark";
-    setIsDarkMode(savedTheme);
+    if (!savedTheme) {
+      const userPrefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      setIsDarkMode(userPrefersDark);
+    } else {
+      setIsDarkMode(savedTheme);
+    }
   }, []);
 
   return (

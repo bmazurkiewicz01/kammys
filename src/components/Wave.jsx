@@ -13,11 +13,11 @@ const Wave = ({ isDarkMode }) => {
   const waves = {
     frontWave: new WaveObj(
       [0.0211, 0.028, 0.015],
-      isDarkMode ? "rgb(2, 41, 79, 0.4)" : "rgb(180, 213, 249, 0.5)"
+      isDarkMode ? "rgb(2, 41, 79, 0.4)" : "rgb(180, 213, 249, 0.5)",
     ),
     backWave: new WaveObj(
       [0.0122, 0.018, 0.005],
-      isDarkMode ? "rgb(2, 50, 80, 0.3)" : "rgb(190, 200, 249, 0.5)"
+      isDarkMode ? "rgb(2, 50, 80, 0.3)" : "rgb(190, 200, 249, 0.5)",
     ),
   };
 
