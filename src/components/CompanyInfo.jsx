@@ -20,7 +20,7 @@ const CompanyInfo = ({ config }) => {
         <Divider />
         <div className="flex flex-wrap">
           <div className="w-5/6 sm:w-1/2 p-6 mt-20">
-            <h3 className="text-3xl text-gray-800 dark:text-white font-bold leading-none mb-3">
+            <h3 className="text-3xl text-gray-800 dark:text-white dark:font-bold leading-none mb-3">
               {firstItem?.title}
             </h3>
             <p className="text-gray-600 dark:text-[rgb(148,166,184)]">
@@ -29,7 +29,7 @@ const CompanyInfo = ({ config }) => {
           </div>
           <div className="w-full sm:w-1/2 p-6">
             <img
-              className="h-6/6 max-h-[500px] rounded-lg shadow-lg sm:ml-auto"
+              className="h-6/6 max-h-[500px] w-[600px] rounded-lg shadow-lg sm:ml-auto object-cover"
               src={firstItem?.img}
               alt={firstItem?.title}
             />
@@ -38,14 +38,14 @@ const CompanyInfo = ({ config }) => {
         <div className="flex flex-wrap flex-col-reverse sm:flex-row">
           <div className="w-full sm:w-1/2 p-6">
             <img
-              className="h-6/6 max-h-[500px]  rounded-lg shadow-lg"
+              className="h-6/6 max-h-[500px] w-[600px] rounded-lg shadow-lg object-cover"
               src={secondItem?.img}
               alt={secondItem?.title}
             />
           </div>
           <div className="w-full sm:w-1/2 p-6 mt-20">
             <div className="align-middle">
-              <h3 className="text-3xl text-gray-800 dark:text-white font-bold leading-none mb-3">
+              <h3 className="text-3xl text-gray-800 dark:text-white dark:font-bold leading-none mb-3">
                 {secondItem?.title}
               </h3>
               <p className="text-gray-600 dark:text-[rgb(148,166,184)] mb-8">

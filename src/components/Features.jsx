@@ -8,15 +8,15 @@ import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
-import DevicesRoundedIcon from "@mui/icons-material/DevicesRounded";
-import EdgesensorHighRoundedIcon from "@mui/icons-material/EdgesensorHighRounded";
-import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
+import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
+import GroupsIcon from "@mui/icons-material/Groups";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import PropTypes from "prop-types";
 import { useState } from "react";
 
 const items = [
   {
-    icon: <ViewQuiltRoundedIcon />,
+    icon: <LocalShippingIcon />,
     title: "Przeprowadzki Gorzów i okolice, cały kraj i Europa",
     description:
       "Realizujemy przeprowadzki w Gorzowie, całej Polsce oraz Europie, w tym do Anglii, Skandynawii, Niemiec, Francji, Holandii i innych krajów.",
@@ -24,7 +24,7 @@ const items = [
     imageDark: 'url("/hero/img1.jpg")',
   },
   {
-    icon: <EdgesensorHighRoundedIcon />,
+    icon: <DirectionsCarIcon />,
     title: "Kompleksowe usługi transportowe",
     description:
       "Przewozimy pianina, fortepiany, sprzęt AGD i RTV, antyki, maszyny i towary na paletach. Zapewniamy pełne zabezpieczenie ładunku.",
@@ -32,7 +32,7 @@ const items = [
     imageDark: 'url("/hero/img10.jpg")',
   },
   {
-    icon: <DevicesRoundedIcon />,
+    icon: <GroupsIcon />,
     title: "Elastyczność i dostosowanie do klienta",
     description:
       "Oferujemy demontaż i montaż mebli, utylizację starych rzeczy, sprzątanie piwnic i garaży oraz wynajem aut z kierowcą. Dostosowujemy się do indywidualnych potrzeb.",
