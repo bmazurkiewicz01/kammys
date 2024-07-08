@@ -17,7 +17,7 @@ import { useState } from "react";
 const items = [
   {
     icon: <ViewQuiltRoundedIcon />,
-    title: "Dashboard",
+    title: "Przeprowadzki Gorzów i okolice, cały kraj i Europa",
     description:
       "This item could provide a snapshot of the most important metrics or data points related to the product.",
     imageLight: 'url("/hero/img1.jpg")',
@@ -86,23 +86,51 @@ const Features = ({ isDarkMode }) => {
                 label={title}
                 onClick={() => handleItemClick(index)}
                 sx={{
+                  backgroundImage: isDarkMode
+                    ? "linear-gradient(to right bottom, rgb(3, 51, 99), rgb(2, 31, 59))"
+                    : "",
+                  alignSelf: "center",
+                  py: 1.5,
+                  px: 0.5,
+                  border: "1px solid",
+                  fontWeight: "600",
                   borderColor: () => {
                     if (!isDarkMode) {
-                      return selectedItemIndex === index ? "#9CCCFC" : "";
+                      return selectedItemIndex === index
+                        ? "#9CCCFC"
+                        : "rgba(9, 89, 170, 0.3)";
                     }
                     return selectedItemIndex === index ? "#9CCCFC" : "";
                   },
                   background: () => {
                     if (!isDarkMode) {
-                      return selectedItemIndex === index ? "none" : "";
+                      return selectedItemIndex === index
+                        ? "none"
+                        : "linear-gradient(to right bottom, rgb(240, 247, 255), rgb(206, 229, 253))";
                     }
                     return selectedItemIndex === index ? "none" : "";
                   },
                   backgroundColor: selectedItemIndex === index ? "#0959AA" : "",
                   "& .MuiChip-label": {
-                    color: selectedItemIndex === index ? "#fff" : "",
+                    color:
+                      selectedItemIndex === index
+                        ? "#FFF"
+                        : isDarkMode
+                        ? "rgb(156, 204, 252)"
+                        : "rgb(9, 89, 170)",
+                  },
+                  "&:hover": {
+                    backgroundColor: isDarkMode ? "#064079" : "#0959AA",
+                  },
+                  "&:focus-visible": {
+                    borderColor: isDarkMode ? "#9CCCFC" : "#02294F",
+                    backgroundColor: isDarkMode ? "#064079" : "#9CCCFC",
+                  },
+                  "& .MuiChip-icon": {
+                    color: isDarkMode ? "#9CCCFC" : "#0959AA",
                   },
                 }}
+                fontFamily={"'Inter', sans-serif"}
               />
             ))}
           </Grid>
@@ -110,8 +138,21 @@ const Features = ({ isDarkMode }) => {
             component={Card}
             variant="outlined"
             sx={{
+              "&:hover": {
+                borderColor: isDarkMode ? "#364049" : "#55A6F6",
+                boxShadow: isDarkMode ? "0 0 24px #02294F" : "0 0 24px #CEE5FD",
+              },
+              transition: "background-color, border, 80ms ease",
               display: { xs: "auto", sm: "none" },
               mt: 4,
+              border: "1px solid",
+              borderColor: isDarkMode
+                ? "rgba(54, 64, 73, 0.3)"
+                : "rgba(214, 226, 235, 0.8)",
+              borderRadius: 6,
+              background: isDarkMode
+                ? "linear-gradient(rgb(9, 14, 16), rgba(19, 27, 32, 0.5))"
+                : "linear-gradient(to bottom, #FFF, #FBFCFE",
             }}
           >
             <Box
@@ -131,6 +172,7 @@ const Features = ({ isDarkMode }) => {
                 variant="body2"
                 fontWeight="bold"
                 fontFamily={"'Inter', sans-serif"}
+                className="pt-10"
               >
                 {selectedFeature.title}
               </Typography>
@@ -153,6 +195,7 @@ const Features = ({ isDarkMode }) => {
                   "& > svg": { transition: "0.2s" },
                   "&:hover > svg": { transform: "translateX(2px)" },
                 }}
+                underline="none"
               >
                 <span>Dowiedz się więcej</span>
                 <ChevronRightRoundedIcon
@@ -194,6 +237,12 @@ const Features = ({ isDarkMode }) => {
                         : "#D6E2EB";
                     }
                     return selectedItemIndex === index ? "#02294F" : "#131B20";
+                  },
+                  boxSizing: "border-box",
+                  transition: "all 100ms ease-in",
+                  "&:focus-visible": {
+                    outline: `3px solid rgba(9, 89, 170, 0.5)`,
+                    outlineOffset: "2px",
                   },
                 }}
               >
@@ -291,7 +340,10 @@ const Features = ({ isDarkMode }) => {
                 m: "0",
                 width: "100%",
                 height: "100%",
+                minWidth: "100%",
+                minHeight: 500,
                 backgroundSize: "cover",
+                backgroundPosition: "center",
                 backgroundImage: () =>
                   !isDarkMode
                     ? items[selectedItemIndex].imageLight
