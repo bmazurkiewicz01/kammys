@@ -3,13 +3,16 @@ import darkLogo from "../assets/logo-dark.svg";
 import lightLogo from "../assets/logo.svg";
 import PropTypes from "prop-types";
 import Canvas from "./Canvas";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import EmailIcon from "@mui/icons-material/Email";
 
 const Footer = ({ isDarkMode, className }) => {
   return (
     <footer className={className}>
       <Canvas isDarkMode={isDarkMode} />
       <div className="py-12 md:py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-12 gap-8 lg:gap-20 mb-8 md:mb-12">
             <div className="md:col-span-4 lg:col-span-5">
               <div className="mb-2">
@@ -22,16 +25,17 @@ const Footer = ({ isDarkMode, className }) => {
                 </Link>
               </div>
               <div className="text-gray-500 dark:text-gray-400">
-                Lorem ipsum is placeholder text commonly used in the graphic,
-                print, and publishing industries for previewing layouts and
-                visual mockups.
+                Firma usługowa KAMMYS oferuje kompleksowe przeprowadzki oraz
+                transport na terenie Gorzowa, Polski i całej Europy. Działamy na
+                rynku od ponad 26 lat, zapewniając najwyższy standard usług w
+                przystępnych cenach.
               </div>
             </div>
 
-            <div className="md:col-span-8 lg:col-span-7 grid sm:grid-cols-3 gap-8">
+            <div className="md:col-span-8 lg:col-span-7 grid sm:grid-cols-2 gap-8">
               <div className="text-sm">
                 <h6 className="text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)] font-medium dark:font-bold mb-1">
-                  Products
+                  Nasze usługi
                 </h6>
                 <ul>
                   <li className="mb-1">
@@ -39,7 +43,7 @@ const Footer = ({ isDarkMode, className }) => {
                       to="/"
                       className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100  transition duration-150 ease-in-out"
                     >
-                      Web Studio
+                      Przeprowadzki dla firm
                     </Link>
                   </li>
                   <li className="mb-1">
@@ -47,7 +51,7 @@ const Footer = ({ isDarkMode, className }) => {
                       to="/"
                       className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
                     >
-                      DynamicBox Flex
+                      Przeprowadzki domów
                     </Link>
                   </li>
                   <li className="mb-1">
@@ -55,104 +59,50 @@ const Footer = ({ isDarkMode, className }) => {
                       to="/"
                       className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
                     >
-                      Programming Forms
+                      Pianina i fortepiany
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link
+                      to="/"
+                      className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
+                    >
+                      Przeprowadzki międzynarodowe
                     </Link>
                   </li>
                 </ul>
               </div>
-
-              <div className="text-sm">
-                <h6 className="text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)] font-medium dark:font-bold mb-1">
-                  Resources
-                </h6>
-                <ul>
-                  <li className="mb-1">
-                    <Link
-                      to="/"
-                      className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
-                    >
-                      Nostrud exercitation
-                    </Link>
-                  </li>
-                  <li className="mb-1">
-                    <Link
-                      to="/"
-                      className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
-                    >
-                      Visual mockups
-                    </Link>
-                  </li>
-                  <li className="mb-1">
-                    <Link
-                      to="/"
-                      className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
-                    >
-                      Nostrud exercitation
-                    </Link>
-                  </li>
-                  <li className="mb-1">
-                    <Link
-                      to="/"
-                      className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
-                    >
-                      Visual mockups
-                    </Link>
-                  </li>
-                  <li className="mb-1">
-                    <Link
-                      to="/"
-                      className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
-                    >
-                      Nostrud exercitation
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
               {/* 4th block */}
               <div className="text-sm">
-                <h6 className="text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)] font-medium dark:font-bold mb-1">
-                  Company
+                <h6 className="ml-1 text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)] font-medium dark:font-bold mb-1">
+                  Kontakt
                 </h6>
                 <ul>
                   <li className="mb-1">
                     <Link
                       to="/"
-                      className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
+                      className=" flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
                     >
-                      Consectetur adipiscing
+                      <LocationOnIcon className="mr-1" />
+                      Zamenhofa 2, 66-400 Gorzów Wielkopolski
                     </Link>
                   </li>
                   <li className="mb-1">
                     <Link
                       to="/"
-                      className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
+                      className="flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
                     >
-                      Labore et dolore
+                      <LocalPhoneIcon className="mr-1" />
+                      667 903 199
                     </Link>
                   </li>
                   <li className="mb-1">
                     <Link
                       to="/"
-                      className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
+                      className="flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
                     >
-                      Consectetur adipiscing
-                    </Link>
-                  </li>
-                  <li className="mb-1">
-                    <Link
-                      to="/"
-                      className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
-                    >
-                      Labore et dolore
-                    </Link>
-                  </li>
-                  <li className="mb-1">
-                    <Link
-                      to="/"
-                      className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
-                    >
-                      Consectetur adipiscing
+                      <EmailIcon className="mr-1" />
+                      kamysprzeprowadzki@tlen.pl
                     </Link>
                   </li>
                 </ul>
@@ -216,7 +166,7 @@ const Footer = ({ isDarkMode, className }) => {
             </ul>
 
             <div className="text-gray-500 dark:text-gray-400 text-sm mr-4">
-              &copy; przeprowadzkigorzow.com, Wszystkie prawa zastrzeżone.
+              &copy; przeprowadzkigorzow.com, Wszelkie prawa zastrzeżone.
             </div>
           </div>
         </div>

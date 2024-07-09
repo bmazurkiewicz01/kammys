@@ -2,6 +2,7 @@ import MainLayout from "../layout/MainLayout";
 import HeroParallax from "./HeroParallax";
 import Features from "./Features";
 import CompanyInfo from "./CompanyInfo";
+import Testimonials from "./Testimonials";
 import { useEffect, useState } from "react";
 
 const Home = () => {
@@ -35,6 +36,9 @@ const Home = () => {
       </section>
       <section>
         <Features isDarkMode={isDarkMode} />
+      </section>
+      <section>
+        <Testimonials isDarkMode={isDarkMode} />
       </section>
     </MainLayout>
   );
