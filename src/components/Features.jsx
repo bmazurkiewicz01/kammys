@@ -8,34 +8,34 @@ import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
-import DevicesRoundedIcon from "@mui/icons-material/DevicesRounded";
-import EdgesensorHighRoundedIcon from "@mui/icons-material/EdgesensorHighRounded";
-import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
+import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
+import GroupsIcon from "@mui/icons-material/Groups";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import PropTypes from "prop-types";
 import { useState } from "react";
 
 const items = [
   {
-    icon: <ViewQuiltRoundedIcon />,
+    icon: <LocalShippingIcon />,
     title: "Przeprowadzki Gorzów i okolice, cały kraj i Europa",
     description:
-      "This item could provide a snapshot of the most important metrics or data points related to the product.",
+      "Realizujemy przeprowadzki w Gorzowie, całej Polsce oraz Europie, w tym do Anglii, Skandynawii, Niemiec, Francji, Holandii i innych krajów.",
     imageLight: 'url("/hero/img1.jpg")',
     imageDark: 'url("/hero/img1.jpg")',
   },
   {
-    icon: <EdgesensorHighRoundedIcon />,
-    title: "Mobile integration",
+    icon: <DirectionsCarIcon />,
+    title: "Kompleksowe usługi transportowe",
     description:
-      "This item could provide information about the mobile app version of the product.",
+      "Przewozimy pianina, fortepiany, sprzęt AGD i RTV, antyki, maszyny i towary na paletach. Zapewniamy pełne zabezpieczenie ładunku.",
     imageLight: 'url("/hero/img10.jpg")',
     imageDark: 'url("/hero/img10.jpg")',
   },
   {
-    icon: <DevicesRoundedIcon />,
-    title: "Available on all platforms",
+    icon: <GroupsIcon />,
+    title: "Elastyczność i dostosowanie do klienta",
     description:
-      "This item could let users know the product is available on all platforms, such as web, mobile, and desktop.",
+      "Oferujemy demontaż i montaż mebli, utylizację starych rzeczy, sprzątanie piwnic i garaży oraz wynajem aut z kierowcą. Dostosowujemy się do indywidualnych potrzeb.",
     imageLight: 'url("/hero/img12.jpg")',
     imageDark: 'url("/hero/img12.jpg")',
   },
@@ -61,7 +61,7 @@ const Features = ({ isDarkMode }) => {
               fontFamily={"'Inter', sans-serif"}
               color={isDarkMode ? "#FFFFFF" : "#131B20"}
             >
-              Product features
+              Twoje Mienie w Dobrych Rękach!
             </Typography>
             <Typography
               variant="body1"
@@ -69,9 +69,10 @@ const Features = ({ isDarkMode }) => {
               fontFamily={"'Inter', sans-serif"}
               sx={{ mb: { xs: 2, sm: 4 } }}
             >
-              Here you can provide a brief overview of the key features of the
-              product. For example, you could list the number of features, the
-              types of features, add-ons, or the benefits of the features.
+              Oferujemy kompleksowe usługi przeprowadzkowe i transportowe,
+              dostosowane do indywidualnych potrzeb klientów. Nasze
+              doświadczenie i profesjonalizm gwarantują satysfakcję i
+              bezpieczeństwo podczas każdej przeprowadzki.
             </Typography>
           </div>
           <Grid

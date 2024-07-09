@@ -21,9 +21,9 @@ const About = () => {
   }, []);
   return (
     <MainLayout isDarkMode={isDarkMode} onThemeChange={onThemeChange}>
-      <section className="bg-gradient-to-b from-[#b4d5f9] to-white dark:from-[rgb(2,41,79)] dark:to-[rgba(9,14,16,0)] bg-no-repeat gradient-bg-size">
-        <div className="pt-28 2xl:pt-[80px]">
-          <h1>About page</h1>
+      <section className="w-full flex flex-col justify-center items-center bg-gradient-to-b from-[#b4d5f9] to-white dark:from-[rgb(2,41,79)] dark:to-[rgba(9,14,16,0)] bg-no-repeat gradient-bg-size">
+        <div className="max-w-[1200px] pt-28 mt-10 2xl:pt-[80px] flex flex-col justify-center items-center">
+          <h1 className="text-3xl">Strona w budowie</h1>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
           doloremque facere ipsum nobis ab illo mollitia a repellat dicta sit.
           Magni labore asperiores ut aspernatur alias voluptatum ipsum. Minima,

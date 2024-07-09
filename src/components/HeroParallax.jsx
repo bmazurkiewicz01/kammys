@@ -22,33 +22,33 @@ const HeroParallax = ({ products }) => {
 
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 1000]),
-    springConfig,
+    springConfig
   );
   const translateXReverse = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, -1000]),
-    springConfig,
+    springConfig
   );
   const rotateX = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [15, 0]),
-    springConfig,
+    springConfig
   );
   const opacity = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
-    springConfig,
+    springConfig
   );
   const rotateZ = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [20, 0]),
-    springConfig,
+    springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 200]),
-    springConfig,
+    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
+    springConfig
   );
 
   return (
     <div
       ref={ref}
-      className="h-[300vh] 3xl:h-[225vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[280vh] sm:h-[300vh] 3xl:h-[225vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -96,7 +96,7 @@ HeroParallax.propTypes = {
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       thumbnail: PropTypes.string.isRequired,
-    }),
+    })
   ).isRequired,
 };
 

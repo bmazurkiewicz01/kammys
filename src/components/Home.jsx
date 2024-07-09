@@ -1,6 +1,8 @@
 import MainLayout from "../layout/MainLayout";
 import HeroParallax from "./HeroParallax";
 import Features from "./Features";
+import CompanyInfo from "./CompanyInfo";
+import Testimonials from "./Testimonials";
 import { useEffect, useState } from "react";
 
 const Home = () => {
@@ -30,7 +32,13 @@ const Home = () => {
         </div>
       </section>
       <section>
+        <CompanyInfo config={companyInfoConfig} />
+      </section>
+      <section>
         <Features isDarkMode={isDarkMode} />
+      </section>
+      <section>
+        <Testimonials isDarkMode={isDarkMode} />
       </section>
     </MainLayout>
   );
@@ -98,5 +106,23 @@ const products = [
     thumbnail: "hero/img14.jpg",
   },
 ];
+
+const companyInfoConfig = {
+  title: "Przeprowadzki i Usługi Transportowe",
+  items: [
+    {
+      title: "Kompleksowe Przeprowadzki",
+      description:
+        "Od ponad 19 lat świadczymy profesjonalne i kompleksowe usługi przeprowadzkowe na terenie całej Europy. Nasza doświadczona ekipa tragarzy zadba o bezpieczny transport Twojego mienia.",
+      img: "/hero/img12.jpg",
+    },
+    {
+      title: "Transport Międzynarodowy",
+      description:
+        "Organizujemy przeprowadzki do Anglii, Skandynawii, Niemiec, Francji, Holandii oraz innych państw. Gwarantujemy bezpieczny i terminowy przewóz Twojego dobytku.",
+      img: "/hero/img6.jpg",
+    },
+  ],
+};
 
 export default Home;
