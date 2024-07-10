@@ -42,9 +42,9 @@ const Home = () => {
         <CompanyInfo config={companyInfoConfig} />
       </section>
       <section>
-        <div className="flex flex-row items-center justify-center h-[55vh] my-20 md:h-auto dark:bg-[rgb(8,15,16)] bg-white relative max-w-[1200px] mx-auto w-full">
+        <div className="flex flex-row items-center justify-center h-[70vh] my-20 md:h-auto dark:bg-[rgb(8,15,16)] bg-white relative max-w-[1200px] mx-auto w-full">
           <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[60rem] px-4">
-            <h2 className="text-center text-xl md:text-4xl dark:font-bold text-black dark:text-white mb-2">
+            <h2 className="text-center text-3xl md:text-4xl dark:font-bold text-black dark:text-white mb-2">
               Łączymy Świat, Przeprowadzka po Przeprowadzce 🌍
             </h2>
             <Divider />
@@ -55,7 +55,7 @@ const Home = () => {
               profesjonalne usługi dostosowane do Twoich potrzeb.
             </p>
             <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-[rgb(8,15,16)] to-white z-40" />
-            <div className="absolute w-full h-[85%] md:h-full z-10">
+            <div className="absolute w-full h-72 md:h-full z-10">
               <Suspense fallback={<div>Loading...</div>}>
                 <World data={sampleArcs} globeConfig={globeConfig} />
               </Suspense>
