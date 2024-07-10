@@ -7,7 +7,7 @@ const CompanyInfo = ({ config }) => {
   return (
     <section className="bg-background py-8" id="product">
       <div className="container max-w-[1200px] m-8 mx-auto">
-        <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-[rgb(31,41,55)] dark:text-[rgb(231,237,243)]">
+        <h1 className="w-full my-2 text-3xl md:text-5xl font-bold leading-tight text-center text-[rgb(31,41,55)] dark:text-[rgb(231,237,243)]">
           {config.title.split(" ").map((word, index) => (
             <span
               key={index}
