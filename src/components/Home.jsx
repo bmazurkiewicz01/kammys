@@ -14,9 +14,14 @@ const World = lazy(() =>
 
 const Home = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const onThemeChange = (oldTheme) => {
     setIsDarkMode(oldTheme === "dark" ? false : true);
+  };
+
+  const onMenuToggle = (isOpen) => {
+    setIsMenuOpen(isOpen);
   };
 
   useEffect(() => {
@@ -32,7 +37,11 @@ const Home = () => {
   }, []);
 
   return (
-    <MainLayout isDarkMode={isDarkMode} onThemeChange={onThemeChange}>
+    <MainLayout
+      isDarkMode={isDarkMode}
+      onThemeChange={onThemeChange}
+      onMenuToggle={onMenuToggle}
+    >
       <section className="bg-gradient-to-b from-[#b4d5f9] to-white dark:from-[rgb(2,41,79)] dark:to-[rgba(9,14,16,0)] bg-no-repeat gradient-bg-size">
         <div className="pt-28 2xl:pt-0 3xl:pt-8">
           <HeroParallax products={products} />
@@ -54,8 +63,10 @@ const Home = () => {
               siecią w całej Europie, zapewniamy niezawodne, wydajne i
               profesjonalne usługi dostosowane do Twoich potrzeb.
             </p>
-            <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-[rgb(8,15,16)] to-white z-40" />
-            <div className="absolute w-full h-72 md:h-full z-10">
+            {!isMenuOpen && (
+              <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-[rgb(8,15,16)] to-white z-40" />
+            )}
+            <div className="absolute w-full h-72 inset-x-0 md:h-full z-10">
               <Suspense fallback={<div>Loading...</div>}>
                 <World data={sampleArcs} globeConfig={globeConfig} />
               </Suspense>

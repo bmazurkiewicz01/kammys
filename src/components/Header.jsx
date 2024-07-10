@@ -6,7 +6,7 @@ import ThemeButton from "./ThemeButton";
 import PropTypes from "prop-types";
 import "./Header.css";
 
-const Header = ({ isDarkMode, onThemeChange }) => {
+const Header = ({ isDarkMode, onThemeChange, onMenuToggle }) => {
   const [scrollDirection, setScrollDirection] = useState("up");
 
   const openMenu = () => {
@@ -18,6 +18,7 @@ const Header = ({ isDarkMode, onThemeChange }) => {
 
     menu.classList.remove("hidden");
     menuBackdrop.classList.remove("hidden");
+    onMenuToggle(true);
   };
 
   useEffect(() => {
@@ -51,6 +52,7 @@ const Header = ({ isDarkMode, onThemeChange }) => {
     setTimeout(() => {
       menu.classList.add("hidden");
       menuBackdrop.classList.add("hidden");
+      onMenuToggle(false);
     }, 500);
   };
 
@@ -108,10 +110,10 @@ const Header = ({ isDarkMode, onThemeChange }) => {
         </div>
       </div>
       <div
-        className="menu-backdrop fixed hidden z-40 top-0 left-0 h-screen w-screen bg-black opacity-40 "
+        className="menu-backdrop fixed hidden z-80 top-0 left-0 h-screen w-screen bg-black opacity-40 "
         onClick={closeMenu}
       ></div>
-      <div className="menu fixed hidden z-50 top-0 right-0 h-screen w-1/2 bg-[rgb(251,252,254)] dark:bg-[rgb(18,27,33)] text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)] p-4">
+      <div className="menu fixed hidden z-90 top-0 right-0 h-screen w-1/2 bg-[rgb(251,252,254)] dark:bg-[rgb(18,27,33)] text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)] p-4">
         <ThemeButton onClick={onThemeChange} />
         <ul className="flex flex-col items-start gap-4 mt-14 text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)]">
           <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full w-full">
@@ -143,6 +145,7 @@ const Header = ({ isDarkMode, onThemeChange }) => {
 Header.propTypes = {
   isDarkMode: PropTypes.bool.isRequired,
   onThemeChange: PropTypes.func.isRequired,
+  onMenuToggle: PropTypes.func.isRequired,
 };
 
 export default Header;
