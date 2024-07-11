@@ -5,6 +5,7 @@ import lightLogo from "../assets/logo.svg";
 import ThemeButton from "./ThemeButton";
 import PropTypes from "prop-types";
 import "./Header.css";
+import Divider from "./Divider";
 
 const Header = ({ isDarkMode, onThemeChange, onMenuToggle }) => {
   const [scrollDirection, setScrollDirection] = useState("up");
@@ -18,6 +19,9 @@ const Header = ({ isDarkMode, onThemeChange, onMenuToggle }) => {
 
     menu.classList.remove("hidden");
     menuBackdrop.classList.remove("hidden");
+
+    document.body.classList.add("no-scroll");
+    document.querySelector("header").style.paddingRight = "15px";
     onMenuToggle(true);
   };
 
@@ -48,6 +52,8 @@ const Header = ({ isDarkMode, onThemeChange, onMenuToggle }) => {
     const menuBackdrop = document.querySelector(".menu-backdrop");
 
     menu.classList.add("animate-slide-out");
+    document.body.classList.remove("no-scroll");
+    document.querySelector("header").style.paddingRight = "";
 
     setTimeout(() => {
       menu.classList.add("hidden");
@@ -75,18 +81,26 @@ const Header = ({ isDarkMode, onThemeChange, onMenuToggle }) => {
           />
           <nav className="hidden w-full sm:flex">
             <ul className="flex items-center justify-start gap-0 flex-grow font-sans font-normal font text-[0.90rem] pl-6 text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)]">
-              <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full">
-                <Link to="/">Strona Główna</Link>
-              </li>
-              <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full">
-                <Link to="/oferta-przeprowadzki-transport">Oferta</Link>
-              </li>
-              <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full">
-                <Link to="/przeprowadzki">Przeprowadzki</Link>
-              </li>
-              <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full">
-                <Link to="/kontakt">Kontakt</Link>
-              </li>
+              <Link to="/" className="">
+                <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full">
+                  Strona Główna
+                </li>
+              </Link>
+              <Link to="/oferta-przeprowadzki-transport" className="">
+                <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full">
+                  Oferta
+                </li>
+              </Link>
+              <Link to="/przeprowadzki" className="">
+                <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full">
+                  Przeprowadzki
+                </li>
+              </Link>
+              <Link to="/kontakt" className="">
+                <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full">
+                  Kontakt
+                </li>
+              </Link>
             </ul>
             <ThemeButton classList={"w-full ml-auto"} onClick={onThemeChange} />
           </nav>
@@ -110,31 +124,38 @@ const Header = ({ isDarkMode, onThemeChange, onMenuToggle }) => {
         </div>
       </div>
       <div
-        className="menu-backdrop fixed hidden z-80 top-0 left-0 h-screen w-screen bg-black opacity-40 "
+        className="menu-backdrop fixed hidden z-80 top-[-0.5rem] left-0 h-screen w-screen bg-black opacity-40 "
         onClick={closeMenu}
       ></div>
-      <div className="menu fixed hidden z-90 top-0 right-0 h-screen w-1/2 bg-[rgb(251,252,254)] dark:bg-[rgb(18,27,33)] text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)] p-4">
+      <div className="menu fixed hidden z-90 top-[-0.5rem] right-0 h-screen w-1/2 bg-[rgb(251,252,254)] dark:bg-[rgb(18,27,33)] text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)] p-4">
         <ThemeButton onClick={onThemeChange} />
         <ul className="flex flex-col items-start gap-4 mt-14 text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)]">
-          <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full w-full">
-            <Link to="/" onClick={closeMenu}>
+          <Link to="/" className="w-full" onClick={closeMenu}>
+            <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full w-full">
               Strona Główna
-            </Link>
-          </li>
-          <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full w-full">
-            <Link to="/oferta-przeprowadzki-transport" onClick={closeMenu}>
+            </li>
+          </Link>
+          <Link
+            to="/oferta-przeprowadzki-transport"
+            className="w-full"
+            onClick={closeMenu}
+          >
+            <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full w-full">
               Oferta
-            </Link>
-          </li>
-          <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full w-full">
-            <Link to="/przeprowadzki" onClick={closeMenu}>
+            </li>
+          </Link>
+          <Link to="/przeprowadzki" className="w-full" onClick={closeMenu}>
+            <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full w-full">
               Przeprowadzki
-            </Link>
-          </li>
-          <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full w-full">
-            <Link to="/kontakt" onClick={closeMenu}>
+            </li>
+          </Link>
+          <Link to="/kontakt" className="w-full" onClick={closeMenu}>
+            <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full w-full">
               Kontakt
-            </Link>
+            </li>
+          </Link>
+          <li className="w-full">
+            <Divider width="w-full" />
           </li>
         </ul>
       </div>

@@ -25,3 +25,8 @@
 .animate-slide-out {
     animation: slide-out 0.5s ease-in-out forwards;
 }
+
+.no-scroll {
+    overflow: hidden;
+    padding-right: 15px;
+}
