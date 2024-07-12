@@ -21,7 +21,6 @@ const Header = ({ isDarkMode, onThemeChange, onMenuToggle }) => {
     menuBackdrop.classList.remove("hidden");
 
     document.body.classList.add("no-scroll");
-    document.querySelector("header").style.paddingRight = "15px";
     onMenuToggle(true);
   };
 
@@ -53,7 +52,6 @@ const Header = ({ isDarkMode, onThemeChange, onMenuToggle }) => {
 
     menu.classList.add("animate-slide-out");
     document.body.classList.remove("no-scroll");
-    document.querySelector("header").style.paddingRight = "";
 
     setTimeout(() => {
       menu.classList.add("hidden");
