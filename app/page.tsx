@@ -1,47 +1,17 @@
-import MainLayout from "../layout/MainLayout";
-import HeroParallax from "./HeroParallax";
-import Features from "./Features";
-import CompanyInfo from "./CompanyInfo";
-import Testimonials from "./Testimonials";
-import Divider from "./Divider";
-import { lazy } from "react";
-import { useEffect, useState } from "react";
+import Divider from "@/components/ui/Divider";
 import { Suspense } from "react";
+import MainLayout from "../components/layout/MainLayout";
+import HeroParallax from "../components/ui/HeroParallax";
+// import Features from "./Features";
+import CompanyInfo from "../components/ui/CompanyInfo";
+// import Testimonials from "./Testimonials";
+// import Divider from "./Divider";
+// import { lazy } from "react";
+// const World = lazy(() => import("./GithubGlobe").then((module) => ({ default: module.World })));
 
-const World = lazy(() =>
-  import("./GithubGlobe").then((module) => ({ default: module.World }))
-);
-
-const Home = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const onThemeChange = (oldTheme) => {
-    setIsDarkMode(oldTheme === "dark" ? false : true);
-  };
-
-  const onMenuToggle = (isOpen) => {
-    setIsMenuOpen(isOpen);
-  };
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (!savedTheme) {
-      const userPrefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
-      setIsDarkMode(userPrefersDark ? true : false);
-    } else {
-      setIsDarkMode(savedTheme === "dark");
-    }
-  }, []);
-
+const Home: React.FC = () => {
   return (
-    <MainLayout
-      isDarkMode={isDarkMode}
-      onThemeChange={onThemeChange}
-      onMenuToggle={onMenuToggle}
-    >
+    <MainLayout>
       <section className="bg-gradient-to-b from-[#b4d5f9] to-white dark:from-[rgb(2,41,79)] dark:to-[rgba(9,14,16,0)] bg-no-repeat gradient-bg-size">
         <div className="pt-28 2xl:pt-0 3xl:pt-8">
           <HeroParallax products={products} />
@@ -63,23 +33,19 @@ const Home = () => {
               siecią w całej Europie, zapewniamy niezawodne, wydajne i
               profesjonalne usługi dostosowane do Twoich potrzeb.
             </p>
-            {!isMenuOpen && (
+            {/* {!isMenuOpen && (
               <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-[rgb(8,15,16)] to-white z-40" />
-            )}
+            )} */}
             <div className="absolute w-full h-72 inset-x-0 md:h-full z-10">
-              <Suspense fallback={<div>Loading...</div>}>
+              {/* <Suspense fallback={<div>Loading...</div>}>
                 <World data={sampleArcs} globeConfig={globeConfig} />
-              </Suspense>
+              </Suspense> */}
             </div>
           </div>
         </div>
       </section>
-      <section>
-        <Features isDarkMode={isDarkMode} />
-      </section>
-      <section>
-        <Testimonials isDarkMode={isDarkMode} />
-      </section>
+      <section>{/* <Features isDarkMode={isDarkMode} /> */}</section>
+      <section>{/* <Testimonials isDarkMode={isDarkMode} /> */}</section>
     </MainLayout>
   );
 };
@@ -473,63 +439,63 @@ const sampleArcs = [
 const products = [
   {
     title: "Przeprowadzki Gorzów Wielkopolski",
-    thumbnail: "hero/img1.jpg",
+    thumbnail: "/hero/img1.jpg",
   },
   {
     title: "Szybkie i bezpieczne przeprowadzki",
-    thumbnail: "hero/img2.jpg",
+    thumbnail: "/hero/img2.jpg",
   },
   {
     title: "Kompleksowe Przeprowadzki Firm",
-    thumbnail: "hero/img3.jpg",
+    thumbnail: "/hero/img3.jpg",
   },
   {
     title: "Transport Pianin i Fortepianów",
-    thumbnail: "hero/img4.jpg",
+    thumbnail: "/hero/img4.jpg",
   },
   {
     title: "Przeprowadzki na Terenie Gorzowa",
-    thumbnail: "hero/img5.jpg",
+    thumbnail: "/hero/img5.jpg",
   },
   {
     title: "Przeprowadzki Międzynarodowe",
-    thumbnail: "hero/img6.jpg",
+    thumbnail: "/hero/img6.jpg",
   },
   {
     title: "Przeprowadzki z Ubezpieczeniem",
-    thumbnail: "hero/img7.jpg",
+    thumbnail: "/hero/img7.jpg",
   },
   {
     title: "Transport Materiałów Budowlanych",
-    thumbnail: "hero/img8.jpg",
+    thumbnail: "/hero/img8.jpg",
   },
   {
     title: "Przeprowadzki Bibliotek i Magazynów",
-    thumbnail: "hero/img9.jpg",
+    thumbnail: "/hero/img9.jpg",
   },
   {
     title: "Przeprowadzki z Ekipa",
-    thumbnail: "hero/img10.jpg",
+    thumbnail: "/hero/img10.jpg",
   },
   {
     title: "Transport Antyków i Delikatnych Przedmiotów",
-    thumbnail: "hero/img11.jpg",
+    thumbnail: "/hero/img11.jpg",
   },
   {
     title: "Przeprowadzki Mieszkań i Domów",
-    thumbnail: "hero/img12.jpg",
+    thumbnail: "/hero/img12.jpg",
   },
   {
     title: "Usługi Transportowe na Terenie Europy",
-    thumbnail: "hero/img13.jpg",
+    thumbnail: "/hero/img13.jpg",
   },
   {
     title: "Bezpieczne Przeprowadzki Sprzętu AGD",
-    thumbnail: "hero/img14.jpg",
+    thumbnail: "/hero/img14.jpg",
   },
   {
     title: "Przeprowadzki Sklepów i Biur",
-    thumbnail: "hero/img14.jpg",
+    thumbnail: "/hero/img14.jpg",
   },
 ];
 

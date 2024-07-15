@@ -1,7 +1,23 @@
+import React from "react";
 import Divider from "./Divider";
-import PropTypes from "prop-types";
+import Image from "next/image";
 
-const CompanyInfo = ({ config }) => {
+interface ConfigItem {
+  title: string;
+  description: string;
+  img: string;
+}
+
+interface Config {
+  title: string;
+  items: ConfigItem[];
+}
+
+interface CompanyInfoProps {
+  config: Config;
+}
+
+const CompanyInfo: React.FC<CompanyInfoProps> = ({ config }) => {
   const [firstItem, secondItem] = config.items;
 
   return (
@@ -28,19 +44,23 @@ const CompanyInfo = ({ config }) => {
             </p>
           </div>
           <div className="w-full sm:w-1/2 p-6">
-            <img
+            <Image
               className="h-6/6 max-h-[500px] w-[600px] rounded-lg shadow-lg sm:ml-auto object-cover"
               src={firstItem?.img}
               alt={firstItem?.title}
+              width={600}
+              height={500}
             />
           </div>
         </div>
         <div className="flex flex-wrap flex-col-reverse sm:flex-row">
           <div className="w-full sm:w-1/2 p-6">
-            <img
+            <Image
               className="h-6/6 max-h-[500px] w-[600px] rounded-lg shadow-lg object-cover"
               src={secondItem?.img}
               alt={secondItem?.title}
+              width={600}
+              height={500}
             />
           </div>
           <div className="w-full sm:w-1/2 p-6 mt-20">
@@ -57,10 +77,6 @@ const CompanyInfo = ({ config }) => {
       </div>
     </section>
   );
-};
-
-CompanyInfo.propTypes = {
-  config: PropTypes.object,
 };
 
 export default CompanyInfo;
