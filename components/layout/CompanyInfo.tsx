@@ -1,5 +1,5 @@
 import React from "react";
-import Divider from "./Divider";
+import Divider from "../ui/Divider";
 import Image from "next/image";
 
 interface ConfigItem {
