@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Divider from "../ui/Divider";
+import "./testimonials.css";
 
 const Testimonials = () => {
   return (
@@ -42,7 +43,7 @@ const Testimonials = () => {
 
           <div className="relative mt-10 md:mt-24 md:order-2">
             <div className="absolute -inset-x-1 inset-y-16 md:-inset-x-2 md:-inset-y-6">
-              <div className="w-full h-full max-w-5xl mx-auto rounded-3xl opacity-30 blur-lg filter custom-gradient-light dark:custom-gradient-dark"></div>
+              <div className="w-full h-full max-w-5xl mx-auto rounded-3xl opacity-30 blur-lg filter custom-gradient"></div>
             </div>
 
             <div className="relative grid max-w-lg grid-cols-1 gap-6 mx-auto md:max-w-none lg:gap-10 md:grid-cols-3">

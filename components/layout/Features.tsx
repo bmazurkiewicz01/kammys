@@ -14,6 +14,7 @@ import GroupsIcon from "@mui/icons-material/Groups";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import { useTheme } from "next-themes";
 import { useState } from "react";
+import "./features.css";
 
 interface Item {
   icon: JSX.Element;
@@ -71,13 +72,13 @@ const Features: React.FC = () => {
               component="h2"
               variant="h4"
               fontFamily={"'Inter', sans-serif"}
-              color={isDarkMode ? "#FFFFFF" : "#131B20"}
+              className="text-[#131B20] dark:text-white"
             >
               Twoje Mienie w Dobrych Rękach!
             </Typography>
             <Typography
               variant="body1"
-              color={isDarkMode ? "rgb(148, 166, 184)" : "#4C5967"}
+              className="text-[#4C5967] dark:text-[rgb(148,166,184)]"
               fontFamily={"'Inter', sans-serif"}
               sx={{ mb: { xs: 2, sm: 4 } }}
             >
@@ -99,10 +100,8 @@ const Features: React.FC = () => {
                 key={index}
                 label={title}
                 onClick={() => handleItemClick(index)}
+                className="dark:chipGradientBg"
                 sx={{
-                  backgroundImage: isDarkMode
-                    ? "linear-gradient(to right bottom, rgb(3, 51, 99), rgb(2, 31, 59))"
-                    : "",
                   alignSelf: "center",
                   py: 1.5,
                   px: 0.5,
@@ -168,6 +167,7 @@ const Features: React.FC = () => {
                 ? "linear-gradient(rgb(9, 14, 16), rgba(19, 27, 32, 0.5))"
                 : "linear-gradient(to bottom, #FFF, #FBFCFE",
             }}
+            className="xs:auto sm:hidden"
           >
             <Box
               sx={{
@@ -315,7 +315,7 @@ const Features: React.FC = () => {
                         "&:hover > svg": { transform: "translateX(2px)" },
                       }}
                       underline="none"
-                      onClick={(event) => {
+                      onClick={(event: any) => {
                         event.stopPropagation();
                       }}
                     >

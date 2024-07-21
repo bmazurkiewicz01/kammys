@@ -2,12 +2,11 @@ import React, { Suspense } from "react";
 import Divider from "@/components/ui/Divider";
 import MainLayout from "../components/layout/MainLayout";
 import HeroParallax from "../components/ui/HeroParallax";
-// import Features from "./Features";
 import CompanyInfo from "../components/layout/CompanyInfo";
 import dynamic from "next/dynamic";
-// import Features from "@/components/layout/Features";
-// import Divider from "./Divider";
 import Testimonials from "@/components/layout/Testimonials";
+import Features from "@/components/layout/Features";
+import HeroHeader from "@/components/layout/HeroHeader";
 
 const GlobeDynamic = dynamic(() => import("@/components/ui/GlobeDynamic"), {
   suspense: true,
@@ -18,7 +17,9 @@ const Home: React.FC = () => {
     <MainLayout>
       <section className="bg-gradient-to-b from-[#b4d5f9] to-white dark:from-[rgb(2,41,79)] dark:to-[rgba(9,14,16,0)] bg-no-repeat gradient-bg-size">
         <div className="pt-28 2xl:pt-0 3xl:pt-8">
-          <HeroParallax products={products} />
+          <HeroParallax products={products}>
+            <HeroHeader />
+          </HeroParallax>
         </div>
       </section>
       <section>
@@ -43,7 +44,9 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-      <section>{/* <Features /> */}</section>
+      <section>
+        <Features />
+      </section>
       <section>
         <Testimonials />
       </section>
