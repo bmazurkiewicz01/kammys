@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 import Testimonials from "@/components/layout/Testimonials";
 import Features from "@/components/layout/Features";
 import HeroHeader from "@/components/layout/HeroHeader";
+import Image from "next/image";
 
 const GlobeDynamic = dynamic(() => import("@/components/ui/GlobeDynamic"), {
   suspense: true,
@@ -16,10 +17,25 @@ const Home: React.FC = () => {
   return (
     <MainLayout>
       <section className="bg-gradient-to-b from-[#b4d5f9] to-white dark:from-[rgb(2,41,79)] dark:to-[rgba(9,14,16,0)] bg-no-repeat gradient-bg-size">
-        <div className="pt-28 2xl:pt-0 3xl:pt-8">
+        <div className="hidden sm:block pt-28 2xl:pt-0 3xl:pt-8">
           <HeroParallax products={products}>
             <HeroHeader />
           </HeroParallax>
+        </div>
+        <div className="flex sm:hidden pt-6 w-full h-screen justify-center items-center flex-col">
+          <HeroHeader className="max-w-7xl mx-auto pt-20 pb-10 px-4 w-full" />
+          <div className="w-full h-full p-6 ">
+            <Image
+              src="/hero/img9.jpg"
+              alt="Przeprowadzki Gorzów Wielkopolski"
+              objectFit="cover"
+              objectPosition="center"
+              quality={100}
+              width={200}
+              height={200}
+              className="w-full max-h-[300px] object-cover rounded-lg shadow-lg "
+            />
+          </div>
         </div>
       </section>
       <section>

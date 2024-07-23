@@ -23,7 +23,7 @@ const CompanyInfo: React.FC<CompanyInfoProps> = ({ config }) => {
   return (
     <section className="bg-background py-8" id="product">
       <div className="container max-w-[1200px] m-8 mx-auto">
-        <h1 className="w-full my-2 text-3xl md:text-5xl font-bold leading-tight text-center text-[rgb(31,41,55)] dark:text-[rgb(231,237,243)]">
+        <h2 className="w-full my-2 text-3xl md:text-5xl font-bold leading-tight text-center text-[rgb(31,41,55)] dark:text-[rgb(231,237,243)]">
           {config.title.split(" ").map((word, index) => (
             <span
               key={index}
@@ -32,10 +32,10 @@ const CompanyInfo: React.FC<CompanyInfoProps> = ({ config }) => {
               {word}{" "}
             </span>
           ))}
-        </h1>
+        </h2>
         <Divider />
         <div className="flex flex-wrap">
-          <div className="w-5/6 sm:w-1/2 p-6 mt-20">
+          <div className="w-5/6 sm:w-1/2 p-6 md:mt-20">
             <h3 className="text-3xl text-gray-800 dark:text-white dark:font-bold leading-none mb-3">
               {firstItem?.title}
             </h3>
