@@ -29,3 +29,21 @@
 .no-scroll {
     overflow: hidden;
 }
+
+.blur-background {
+    position: relative;
+    overflow: hidden;
+}
+
+.blur-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    backdrop-filter: blur(24px);
+    z-index: -1;
+    pointer-events: none;
+}

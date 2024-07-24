@@ -35,7 +35,7 @@ const CompanyInfo: React.FC<CompanyInfoProps> = ({ config }) => {
         </h2>
         <Divider />
         <div className="flex flex-wrap">
-          <div className="w-5/6 sm:w-1/2 p-6 md:mt-20">
+          <div className="w-full sm:w-1/2 p-6 md:mt-20">
             <h3 className="text-3xl text-gray-800 dark:text-white dark:font-bold leading-none mb-3">
               {firstItem?.title}
             </h3>

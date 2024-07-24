@@ -28,12 +28,10 @@ const Home: React.FC = () => {
             <Image
               src="/hero/img9.jpg"
               alt="Przeprowadzki Gorzów Wielkopolski"
-              objectFit="cover"
-              objectPosition="center"
               quality={100}
               width={200}
               height={200}
-              className="w-full max-h-[300px] object-cover rounded-lg shadow-lg "
+              className="w-full max-h-[300px] object-cover rounded-lg shadow-lg object-center"
             />
           </div>
         </div>
@@ -42,7 +40,10 @@ const Home: React.FC = () => {
         <CompanyInfo config={companyInfoConfig} />
       </section>
       <section>
-        <div className="flex flex-row items-center justify-center h-[70vh] my-20 md:h-auto dark:bg-[rgb(8,15,16)] bg-white relative max-w-[1200px] mx-auto w-full">
+        <Testimonials />
+      </section>
+      <section>
+        <div className="flex flex-row items-center justify-center h-[70vh] my-8 md:h-auto dark:bg-[rgb(8,15,16)] bg-white relative max-w-[1200px] mx-auto w-full">
           <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[60rem] px-4">
             <h2 className="text-center text-3xl md:text-4xl dark:font-bold text-black dark:text-white mb-2">
               Łączymy Świat, Przeprowadzka po Przeprowadzce 🌍
@@ -62,9 +63,6 @@ const Home: React.FC = () => {
       </section>
       <section>
         <Features />
-      </section>
-      <section>
-        <Testimonials />
       </section>
     </MainLayout>
   );

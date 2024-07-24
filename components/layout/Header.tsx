@@ -1,22 +1,39 @@
 import darkLogo from "../../public/logo-dark.svg";
 import lightLogo from "../../public/logo.svg";
 import ThemeButton from "../ui/ThemeButton";
-import Link from "next/link"; 
+import Link from "next/link";
 import Image from "next/image";
 import HeaderClient from "./HeaderClient";
 import "./header.css";
 
 const Header: React.FC = () => {
-
   return (
-    <header className="fixed min-h-16 top-2 left-0 right-auto z-30 w-full md:top-6 transition-transform duration-300" id="top-header">
+    <header
+      className="fixed min-h-16 top-2 left-0 right-auto z-50 w-full md:top-6 transition-transform duration-300"
+      id="top-header"
+    >
       <div className="flex items-center justify-center gap-3 mx-auto px-6 w-full">
-        <div className="mx-auto max-w-6xl w-full relative rounded-full flex bg-white bg-opacity-40 px-4 min-h-14 backdrop-blur-xl
-          items-center max-h-14 border border-[rgba(191,204,217,0.5)] 
+        <div
+          className="blur-background mx-auto max-w-6xl w-full relative rounded-full flex bg-white bg-opacity-40 px-4 min-h-14
+          items-center max-h-14 border border-[rgba(191,204,217,0.5)]
           shadow-[0_0_1px_rgba(85,166,246,0.1),1px_1.5px_2px_-1px_rgba(85,166,246,0.15),4px_4px_12px_-2.5px_rgba(85,166,246,0.15)] dark:bg-black dark:bg-opacity-40 dark:border-[rgba(76,89,103,0.3)] dark:text-white"
         >
-          <Image src={lightLogo.src} className="w-12 h-auto cursor-pointer block dark:hidden" width='48' height='48' alt='Logo firmy KAMMYS' />
-          <Image src={darkLogo.src} className="w-12 h-auto cursor-pointer hidden dark:block" width='48' height='48' alt='Logo firmy KAMMYS' />
+          <Link href="/" passHref>
+            <Image
+              src={lightLogo.src}
+              className="w-28 h-auto cursor-pointer block dark:hidden"
+              width="112"
+              height="112"
+              alt="Logo firmy KAMMYS"
+            />
+            <Image
+              src={darkLogo.src}
+              className="w-28 h-auto cursor-pointer hidden dark:block"
+              width="112"
+              height="112"
+              alt="Logo firmy KAMMYS"
+            />
+          </Link>
           <nav className="hidden w-full sm:flex">
             <ul className="flex items-center justify-start gap-0 flex-grow font-sans font-normal text-[0.90rem] pl-6 text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)]">
               <Link href="/" passHref>
