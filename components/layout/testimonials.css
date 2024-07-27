@@ -1,0 +1,8 @@
+.custom-gradient {
+    background: linear-gradient(90deg, rgb(180, 213, 249) -0.55%, rgb(144, 194, 243) 22.86%, rgb(108, 175, 238) 48.36%, rgb(72, 156, 233) 73.33%, rgb(36, 137, 227) 99.34%);
+}
+
+
+.dark .custom-gradient {
+    background: linear-gradient(90deg, rgb(25, 118, 210) -0.55%, rgb(22, 104, 186) 22.86%, rgb(19, 90, 162) 48.36%, rgb(16, 76, 138) 73.33%, rgb(13, 62, 114) 99.34%);
+}
