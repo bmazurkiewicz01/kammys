@@ -1,8 +1,8 @@
 import React, { Suspense } from "react";
 import Divider from "@/components/ui/Divider";
-import MainLayout from "../components/layout/MainLayout";
-import HeroParallax from "../components/ui/HeroParallax";
-import CompanyInfo from "../components/layout/CompanyInfo";
+import MainLayout from "@/components/layout/MainLayout";
+import HeroParallax from "@/components/ui/HeroParallax";
+import CompanyInfo from "@/components/layout/CompanyInfo";
 import dynamic from "next/dynamic";
 import Testimonials from "@/components/layout/Testimonials";
 import Features from "@/components/layout/Features";
@@ -40,6 +40,9 @@ const Home: React.FC = () => {
         <CompanyInfo config={companyInfoConfig} />
       </section>
       <section>
+        <Features />
+      </section>
+      <section>
         <Testimonials />
       </section>
       <section>
@@ -60,9 +63,6 @@ const Home: React.FC = () => {
             </Suspense>
           </div>
         </div>
-      </section>
-      <section>
-        <Features />
       </section>
     </MainLayout>
   );
