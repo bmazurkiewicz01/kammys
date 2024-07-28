@@ -1,5 +1,5 @@
-import darkLogo from "../../public/logo-dark.svg";
-import lightLogo from "../../public/logo.svg";
+import darkLogo from "../../public/logo-dark-without-text.svg";
+import lightLogo from "../../public/logo-without-text.svg";
 import ThemeButton from "../ui/ThemeButton";
 import Link from "next/link";
 import Image from "next/image";
@@ -21,16 +21,16 @@ const Header: React.FC = () => {
           <Link href="/" passHref>
             <Image
               src={lightLogo.src}
-              className="w-28 h-auto cursor-pointer block dark:hidden"
-              width="112"
-              height="112"
+              className="w-14 h-auto cursor-pointer block dark:hidden"
+              width="53"
+              height="53"
               alt="Logo firmy KAMMYS"
             />
             <Image
               src={darkLogo.src}
-              className="w-28 h-auto cursor-pointer hidden dark:block"
-              width="112"
-              height="112"
+              className="w-14 h-auto cursor-pointer hidden dark:block"
+              width="53"
+              height="53"
               alt="Logo firmy KAMMYS"
             />
           </Link>

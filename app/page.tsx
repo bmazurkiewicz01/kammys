@@ -23,8 +23,8 @@ const Home: React.FC = () => {
           </HeroParallax>
         </div>
         <div className="flex sm:hidden pt-6 w-full h-screen justify-center items-center flex-col">
-          <HeroHeader className="max-w-7xl mx-auto pt-20 pb-10 px-4 w-full" />
-          <div className="w-full h-full p-6 ">
+          <HeroHeader className="max-w-7xl mx-auto pt-20 px-4 w-full" />
+          <div className="w-full h-full p-4 ">
             <Image
               src="/hero/img9.jpg"
               alt="Przeprowadzki Gorzów Wielkopolski"
@@ -47,7 +47,7 @@ const Home: React.FC = () => {
         <Testimonials />
       </section>
       <section>
-        <div className="flex flex-row items-center justify-center h-[70vh] my-8 md:h-auto dark:bg-[rgb(8,15,16)] bg-white relative max-w-[1200px] mx-auto w-full">
+        <div className="flex flex-row items-center pb-4 justify-center h-[70vh] my-8 md:h-auto dark:bg-[rgb(8,15,16)] bg-white relative max-w-[1200px] mx-auto w-full">
           <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[60rem] px-4">
             <h2 className="text-center text-3xl md:text-4xl dark:font-bold text-black dark:text-white mb-2">
               Łączymy Świat, Przeprowadzka po Przeprowadzce 🌍

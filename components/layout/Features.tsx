@@ -92,6 +92,7 @@ const Features = () => {
             alt={items[selectedItemIndex].title}
             width={449}
             height={280}
+            priority={true}
           />
           <div className="pl-4 pr-4 pb-4 text-[14px]">
             <p className="text-[#131B20] dark:text-white pt-10 font-bold">
@@ -172,6 +173,7 @@ const Features = () => {
           alt={items[selectedItemIndex].title}
           width={600}
           height={757}
+          priority={true}
           className="w-full object-cover rounded-[4px] border-[1px] border-[rgba(214,226,235,0.8)] dark:border-[rgba(54,64,73,0.3)] hover:bg-[rgba(25,118,210,0.04)] hover:shadow-[0_0_24px_#CEE5FD] dark:hover:shadow-[0_0_24px_#02294F] hover:border-[#55A6F6]"
         />
       </div>
