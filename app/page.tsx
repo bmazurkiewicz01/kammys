@@ -46,7 +46,7 @@ const Home: React.FC = () => {
       <section>
         <Testimonials />
       </section>
-      <section>
+      <section className="hidden sm:block">
         <div className="flex flex-row items-center pb-4 justify-center h-[70vh] my-8 md:h-auto dark:bg-[rgb(8,15,16)] bg-white relative max-w-[1200px] mx-auto w-full">
           <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[60rem] px-4">
             <h2 className="text-center text-3xl md:text-4xl dark:font-bold text-black dark:text-white mb-2">
