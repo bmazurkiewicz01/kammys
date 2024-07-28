@@ -32,6 +32,7 @@ const Home: React.FC = () => {
               width={200}
               height={200}
               className="w-full max-h-[300px] object-cover rounded-lg shadow-lg object-center"
+              priority={true}
             />
           </div>
         </div>
