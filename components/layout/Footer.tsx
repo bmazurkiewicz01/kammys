@@ -8,6 +8,7 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import Image from "next/image";
 import path from "path";
+import Divider from "../ui/Divider";
 
 interface FooterProps {
   className?: string;
@@ -16,8 +17,13 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ className }) => {
   return (
     <footer className={className}>
-      <Canvas />
+      <div className="hidden sm:block">
+        <Canvas />
+      </div>
       <div className="py-12 md:py-16">
+        <div className="block sm:hidden px-4">
+          <Divider width="w-full" mb="mb-0" />
+        </div>
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-12 gap-8 lg:gap-20 mb-8 md:mb-12">
             <div className="md:col-span-4 lg:col-span-5">

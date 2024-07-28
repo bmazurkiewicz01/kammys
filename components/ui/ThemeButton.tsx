@@ -33,7 +33,7 @@ const ThemeButton: React.FC<ThemeButtonProps> = ({ classList }) => {
         height={36}
         sizes="36x36"
         alt="Loading Light/Dark Toggle"
-        priority={true}
+        priority={false}
         title="Loading Light/Dark Toggle"
       />
     );
