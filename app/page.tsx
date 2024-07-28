@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 import Testimonials from "@/components/layout/Testimonials";
 import Features from "@/components/layout/Features";
 import HeroHeader from "@/components/layout/HeroHeader";
+import Highlights from "@/components/layout/Highlights";
 import Image from "next/image";
 
 const GlobeDynamic = dynamic(() => import("@/components/ui/GlobeDynamic"), {
@@ -42,6 +43,9 @@ const Home: React.FC = () => {
       </section>
       <section>
         <Features />
+      </section>
+      <section>
+        <Highlights />
       </section>
       <section>
         <Testimonials />
