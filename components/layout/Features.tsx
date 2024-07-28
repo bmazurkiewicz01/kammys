@@ -6,7 +6,9 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import { useState } from "react";
 import "./features.css";
 import Image from "next/image";
+import { div } from "three/examples/jsm/nodes/Nodes.js";
 import Link from "next/link";
+import { title } from "process";
 
 interface Item {
   icon: JSX.Element;
@@ -171,7 +173,6 @@ const Features = () => {
           alt={items[selectedItemIndex].title}
           width={600}
           height={757}
-          unoptimized={true}
           priority={true}
           className="w-full object-cover rounded-[4px] border-[1px] border-[rgba(214,226,235,0.8)] dark:border-[rgba(54,64,73,0.3)] hover:bg-[rgba(25,118,210,0.04)] hover:shadow-[0_0_24px_#CEE5FD] dark:hover:shadow-[0_0_24px_#02294F] hover:border-[#55A6F6]"
         />
