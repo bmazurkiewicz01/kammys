@@ -7,7 +7,6 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import Image from "next/image";
-import path from "path";
 import Divider from "../ui/Divider";
 
 interface FooterProps {

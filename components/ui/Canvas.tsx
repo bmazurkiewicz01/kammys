@@ -2,7 +2,9 @@
 import { useRef, useEffect, useState } from "react";
 import { CanvasContext } from "../hooks/useCanvas";
 import useResponsiveSize from "../hooks/useResponsiveSize";
-import Wave from "./Wave";
+import dynamic from "next/dynamic";
+
+const Wave = dynamic(() => import("./Wave"), { ssr: false });
 
 const Canvas: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);

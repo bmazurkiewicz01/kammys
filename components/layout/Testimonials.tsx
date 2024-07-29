@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Divider from "../ui/Divider";
 import "./testimonials.css";
+import GoogleIcon from "@mui/icons-material/Google";
 
 const Testimonials = () => {
   return (
@@ -9,7 +10,7 @@ const Testimonials = () => {
         <div className="flex flex-col items-center">
           <div className="text-center">
             <p className="text-lg font-medium text-gray-600 dark:text-[rgb(148,166,184)] font-pj">
-              77 osób napisało jak dobrze wykonujemy nasze usługi
+              77+ osób napisało jak dobrze wykonujemy nasze usługi
             </p>
             <h2 className="mt-4 text-3xl mb-2 font-bold text-gray-900 dark:text-white sm:text-4xl xl:text-5xl font-pj">
               {"Nasi zadowoleni klienci mówią o nas:"
@@ -70,18 +71,23 @@ const Testimonials = () => {
                 <div key={index} className="flex flex-col overflow-hidden">
                   <div className="flex flex-col justify-between flex-1 p-6 bg-white dark:bg-[rgba(8,15,16,0.9)] border-[1px] border-[rgb(156,204,252)] dark:border-[rgb(2,41,79)] rounded-3xl lg:py-8 lg:px-7">
                     <div className="flex-1">
-                      <div className="flex items-center">
-                        {[...Array(5)].map((_, starIndex) => (
-                          <svg
-                            key={starIndex}
-                            className="w-5 h-5 text-[#FDB241]"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                          </svg>
-                        ))}
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center">
+                          {[...Array(5)].map((_, starIndex) => (
+                            <svg
+                              key={starIndex}
+                              className="w-5 h-5 text-[#FDB241]"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          ))}
+                        </div>
+                        <GoogleIcon
+                          className={"self-end text-[rgb(25,118,210)]"}
+                        />
                       </div>
 
                       <blockquote className="flex-1 mt-8">
