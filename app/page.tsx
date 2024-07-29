@@ -9,6 +9,7 @@ import Features from "@/components/layout/Features";
 import HeroHeader from "@/components/layout/HeroHeader";
 import Highlights from "@/components/layout/Highlights";
 import Image from "next/image";
+import CallToAction from "@/components/layout/CallToAction";
 
 const GlobeDynamic = dynamic(() => import("@/components/ui/GlobeDynamic"), {
   suspense: true,
@@ -47,10 +48,7 @@ const Home: React.FC = () => {
       <section>
         <Highlights />
       </section>
-      <section>
-        <Testimonials />
-      </section>
-      <section className="hidden sm:block">
+      <section className="hidden sm:block py-8">
         <div className="flex flex-row items-center pb-4 justify-center h-[70vh] my-8 md:h-auto dark:bg-[rgb(8,15,16)] bg-white relative max-w-[1200px] mx-auto w-full">
           <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[60rem] px-4">
             <h2 className="text-center text-3xl md:text-4xl dark:font-bold text-black dark:text-white mb-2">
@@ -68,6 +66,12 @@ const Home: React.FC = () => {
             </Suspense>
           </div>
         </div>
+      </section>
+      <section>
+        <Testimonials />
+      </section>
+      <section className="py-10">
+        <CallToAction />
       </section>
     </MainLayout>
   );
@@ -142,7 +146,7 @@ const companyInfoConfig = {
     {
       title: "Kompleksowe Przeprowadzki",
       description:
-        "Od ponad 19 lat świadczymy profesjonalne i kompleksowe usługi przeprowadzkowe na terenie całej Europy. Nasza doświadczona ekipa tragarzy zadba o bezpieczny transport Twojego mienia.",
+        "Od ponad 26 lat świadczymy profesjonalne i kompleksowe usługi przeprowadzkowe na terenie całej Europy. Nasza doświadczona ekipa tragarzy zadba o bezpieczny transport Twojego mienia.",
       img: "/hero/img12.jpg",
     },
     {

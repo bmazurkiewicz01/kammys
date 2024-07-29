@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect } from "react";
 import ThemeButton from "../ui/ThemeButton";
 import Divider from "../ui/Divider";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 
 const HeaderClient: React.FC = () => {
   const openMenu = () => {
@@ -125,6 +126,7 @@ const HeaderClient: React.FC = () => {
           <Link href="tel:+48667903199" className="w-full mt-[-1.5rem]">
             <li className="w-full max-w-2xl pt-3 flex justify-center">
               <div className="transition-btn-trans duration-250 ease-btn-trans-time delay-0 flex items-center justify-center cursor-pointer text-base md:text-xl px-[10px] py-[8px] uppercase text-white font-medium bg-[rgb(25,117,210)] rounded-md z-90 hover:shadow-btn-hover-shadow dark:text-[rgba(0,0,0,0.87)] dark:bg-[rgb(144,202,249)] dark:hover:bg-[rgb(66,165,245)]">
+                <LocalPhoneIcon className="mr-2" />
                 Zadzwoń
               </div>
             </li>

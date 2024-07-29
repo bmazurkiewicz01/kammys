@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 
 interface HeroHeaderProps {
   className?: string;
@@ -26,6 +27,7 @@ const HeroHeader: React.FC<HeroHeaderProps> = ({ className }) => {
           href="tel:+48667903199"
           className="transition-btn-trans duration-250 ease-btn-trans-time delay-0 flex items-center justify-center cursor-pointer text-base md:text-xl px-[10px] py-[8px] text-white font-medium bg-[rgb(25,117,210)] uppercase rounded-md z-90 hover:shadow-btn-hover-shadow dark:text-[rgba(0,0,0,0.87)] dark:bg-[rgb(144,202,249)] dark:hover:bg-[rgb(66,165,245)]"
         >
+          <LocalPhoneIcon className="mr-2" />
           667 903 199
         </Link>
       </div>
