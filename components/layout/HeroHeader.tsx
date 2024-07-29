@@ -15,7 +15,7 @@ const HeroHeader: React.FC<HeroHeaderProps> = ({ className }) => {
       <h1 className="text-2xl md:text-7xl font-bold text-[#111111] dark:text-white">
         Profesjonalne <br /> przeprowadzki i transport
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 text-[#111111] dark:text-neutral-200">
+      <p className="max-w-2xl text-base md:text-xl mt-2 sm:mt-8 text-[#111111] dark:text-neutral-200">
         Firma usługowa KAMMYS oferuje kompleksowe przeprowadzki oraz transport
         na terenie Gorzowa, Polski i całej Europy. Działamy na rynku od ponad 26
         lat, zapewniając najwyższy standard usług w przystępnych cenach.

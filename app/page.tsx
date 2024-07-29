@@ -10,6 +10,7 @@ import HeroHeader from "@/components/layout/HeroHeader";
 import Highlights from "@/components/layout/Highlights";
 import Image from "next/image";
 import CallToAction from "@/components/layout/CallToAction";
+import Carousel from "@/components/ui/Carousel";
 
 const GlobeDynamic = dynamic(() => import("@/components/ui/GlobeDynamic"), {
   suspense: true,
@@ -24,18 +25,24 @@ const Home: React.FC = () => {
             <HeroHeader />
           </HeroParallax>
         </div>
-        <div className="flex sm:hidden pt-6 w-full h-screen justify-center items-center flex-col">
-          <HeroHeader className="max-w-7xl mx-auto pt-20 px-4 w-full" />
-          <div className="w-full h-full p-4 ">
-            <Image
-              src="/hero/img9.jpg"
-              alt="Przeprowadzki Gorzów Wielkopolski"
-              quality={100}
-              width={200}
-              height={200}
-              className="w-full max-h-[300px] object-cover rounded-lg shadow-lg object-center"
-              priority={true}
-            />
+        <div className="flex sm:hidden w-full pt-12 h-screen justify-center items-center flex-col">
+          <HeroHeader className="max-w-7xl mx-auto pt-0 px-4 w-full" />
+          <div className="p-4 max-h-[300px] presm:max-h-[450px]">
+            <Carousel autoSlide={true}>
+              {slides.map((slide, index) => (
+                <div key={index} className="w-full flex-shrink-0">
+                  <Image
+                    src={slide}
+                    alt="Przeprowadzki Gorzów Wielkopolski"
+                    quality={100}
+                    width={800}
+                    height={500}
+                    className="object-cover w-full h-full rounded-lg shadow-lg"
+                    priority={true}
+                  />
+                </div>
+              ))}
+            </Carousel>
           </div>
         </div>
       </section>
@@ -76,6 +83,13 @@ const Home: React.FC = () => {
     </MainLayout>
   );
 };
+
+const slides = [
+  "/hero/img1.jpg",
+  "/hero/img2.jpg",
+  "/hero/img3.jpg",
+  "/hero/img4.jpg",
+];
 
 const products = [
   {
