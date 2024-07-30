@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import useResponsiveSize from "../hooks/useResponsiveSize";
 import WaveObj from "../utils/wave";
 
-const Wave: React.FC= () => {
+const Wave: React.FC = () => {
   const { context } = useCanvasContext();
   const { width } = useResponsiveSize();
   const height = 600;
@@ -25,6 +25,14 @@ const Wave: React.FC= () => {
 
   const render = useCallback(() => {
     if (context) {
+      if (document.documentElement.classList.contains("dark")) {
+        waves.frontWave.color = "rgba(2, 41, 79, 0.4)";
+        waves.backWave.color = "rgba(2, 50, 80, 0.3)";
+      } else {
+        waves.frontWave.color = "rgba(180, 213, 249, 0.5)";
+        waves.backWave.color = "rgba(190, 200, 249, 0.5)";
+      }
+
       context.clearRect(0, 0, width, height);
       Object.values(waves).forEach((wave) => {
         wave.draw(context, width, height, frequency);
@@ -32,7 +40,7 @@ const Wave: React.FC= () => {
       frequency += 0.013;
       requestAnimationFrame(render);
     }
-  }, [context, width, height, frequency, waves]);
+  }, [context, width, height, frequency]);
 
   useEffect(() => {
     if (context) render();

@@ -2,12 +2,14 @@ import React from "react";
 import Link from "next/link";
 import darkLogo from "../../public/logo-dark.svg";
 import lightLogo from "../../public/logo.svg";
-import Canvas from "../ui/Canvas";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import Image from "next/image";
 import Divider from "../ui/Divider";
+import dynamic from "next/dynamic";
+
+const Canvas = dynamic(() => import("../ui/Canvas"), { ssr: false });
 
 interface FooterProps {
   className?: string;
