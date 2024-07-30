@@ -34,14 +34,14 @@ const Carousel: React.FC<CarouselProps> = ({
   }, []);
 
   return (
-    <div className="overflow-hidden relative w-full h-full">
+    <div className="overflow-hidden relative w-full max-h-[300px] presm:max-h-[450px]">
       <div
-        className="flex transition-transform ease-out duration-500 h-full"
+        className="flex transition-transform ease-out duration-500 max-h-[300px] presm:max-h-[450px]"
         style={{ transform: `translateX(-${selectedItemIndex * 100}%)` }}
       >
         {slides}
       </div>
-      <div className="absolute inset-0 flex items-center justify-between p-6">
+      <div className="absolute inset-0 flex items-center justify-between p-6 max-h-[300px] presm:max-h-[450px]">
         <button
           onClick={previousSlide}
           className="p-1 rounded-full shadow bg-white text-gray-800 hover:bg-white"
@@ -55,7 +55,7 @@ const Carousel: React.FC<CarouselProps> = ({
           <ChevronRight />
         </button>
       </div>
-      <div className="absolute bottom-4 right-0 left-0">
+      <div className="absolute bottom-4 right-0 left-0 max-h-[300px] presm:max-h-[450px]">
         <div className="flex items-center justify-center gap-2">
           {slides.map((_: any, i: any) => (
             <div

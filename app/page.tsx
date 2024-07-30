@@ -13,7 +13,6 @@ import CallToAction from "@/components/layout/CallToAction";
 
 const GlobeDynamic = dynamic(() => import("@/components/ui/GlobeDynamic"), {
   ssr: false,
-  suspense: true,
 });
 
 const Carousel = dynamic(() => import("@/components/ui/Carousel"), {
@@ -29,10 +28,10 @@ const Home: React.FC = () => {
             <HeroHeader />
           </HeroParallax>
         </div>
-        <div className="flex sm:hidden w-full pt-12 h-screen justify-center items-center flex-col">
+        <div className="block sm:hidden w-full pt-24 h-screen">
           <HeroHeader className="max-w-7xl mx-auto pt-0 px-4 w-full" />
           <div className="p-4 max-h-[300px] presm:max-h-[450px]">
-            <Carousel autoSlide={true}>
+            <Carousel autoSlide={true} autoSlideInterval={3500}>
               {slides.map((slide, index) => (
                 <div key={index} className="w-full flex-shrink-0">
                   <Image
@@ -89,9 +88,9 @@ const Home: React.FC = () => {
 };
 
 const slides = [
-  "/hero/img1.jpg",
+  "/hero/img7.jpg",
   "/hero/img2.jpg",
-  "/hero/img3.jpg",
+  "/hero/img9.jpg",
   "/hero/img4.jpg",
 ];
 
