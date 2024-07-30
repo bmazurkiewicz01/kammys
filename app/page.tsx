@@ -10,10 +10,14 @@ import HeroHeader from "@/components/layout/HeroHeader";
 import Highlights from "@/components/layout/Highlights";
 import Image from "next/image";
 import CallToAction from "@/components/layout/CallToAction";
-import Carousel from "@/components/ui/Carousel";
 
 const GlobeDynamic = dynamic(() => import("@/components/ui/GlobeDynamic"), {
+  ssr: false,
   suspense: true,
+});
+
+const Carousel = dynamic(() => import("@/components/ui/Carousel"), {
+  ssr: true,
 });
 
 const Home: React.FC = () => {
