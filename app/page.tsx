@@ -28,7 +28,7 @@ const Home: React.FC = () => {
             <HeroHeader />
           </HeroParallax>
         </div>
-        <div className="block sm:hidden w-full pt-24 h-screen">
+        <div className="block sm:hidden w-full pt-24">
           <HeroHeader className="max-w-7xl mx-auto pt-0 px-4 w-full" />
           <div className="p-4 max-h-[300px] presm:max-h-[450px]">
             <Carousel autoSlide={true} autoSlideInterval={3500}>
