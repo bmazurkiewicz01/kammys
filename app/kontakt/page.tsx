@@ -32,7 +32,7 @@ const About: React.FC = () => {
             <div className="w-full md:w-[50%] md:pr-4">
               <div className="w-full">
                 <h1 className="text-lg mb-2 md:text-xl text-[rgb(31,41,55)] dark:text-white font-bold">
-                  Kompleksowe Przeprowadzki Gorzów
+                  Kompleksowe Przeprowadzki Gorzów Wielkopolski
                 </h1>
                 <p className="text-gray-600 dark:text-[rgb(148,166,184)] text-sm md:text-base">
                   Nasza firma przeprowadzkowa w Gorzowie gwarantuje bezpieczny
