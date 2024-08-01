@@ -37,9 +37,10 @@ const Home: React.FC = () => {
                   <Image
                     src={slide}
                     alt="Przeprowadzki Gorzów Wielkopolski"
-                    quality={100}
-                    width={800}
-                    height={500}
+                    quality={50}
+                    width={600}
+                    height={600}
+                    loading="eager"
                     className="object-cover w-full h-full rounded-lg shadow-lg"
                     priority={true}
                   />

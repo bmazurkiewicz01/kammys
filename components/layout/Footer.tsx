@@ -56,9 +56,9 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
 
             <div className="md:col-span-8 lg:col-span-7 grid sm:grid-cols-2 gap-8">
               <div className="text-sm">
-                <h6 className="text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)] font-medium dark:font-bold mb-1">
+                <h3 className="text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)] font-medium dark:font-bold mb-1">
                   Nasze usługi
-                </h6>
+                </h3>
                 <ul>
                   <li className="mb-1">
                     <Link
@@ -95,9 +95,9 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
                 </ul>
               </div>
               <div className="text-sm">
-                <h6 className="ml-1 text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)] font-medium dark:font-bold mb-1">
+                <h3 className="ml-1 text-[rgb(19,17,32)] dark:text-[rgb(191,204,217)] font-medium dark:font-bold mb-1">
                   Kontakt
-                </h6>
+                </h3>
                 <ul>
                   <li className="mb-1">
                     <Link

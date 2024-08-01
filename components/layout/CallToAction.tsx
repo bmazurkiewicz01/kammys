@@ -36,12 +36,12 @@ const CallToAction = () => {
       />
       <div className="relative container px-4 mx-auto">
         <div className="max-w-sm sm:max-w-md md:max-w-2xl mx-auto">
-          <h1 className="text-4xl xs:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-10">
+          <h2 className="text-4xl xs:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-10">
             <span>Przygotuj się na przeprowadzkę z </span>
             <span className="font-serif italic text-[rgb(25,118,210)]">
               łatwością
             </span>
-          </h1>
+          </h2>
           <p className="text-lg text-gray-600 dark:text-[#94A6B8] mb-10">
             Zmieniaj miejsce zamieszkania z nami u boku.
           </p>
