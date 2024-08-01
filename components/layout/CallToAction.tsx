@@ -48,7 +48,7 @@ const CallToAction = () => {
           <div className="md:flex mb-10 items-center">
             <div className="flex mb-6 md:mb-0 md:mr-6 items-center">
               <Image
-                src="/testimonials/google_review_1.png"
+                src="/testimonials/google_review_7.png"
                 className="w-[44px]"
                 alt=""
                 width={64}
@@ -56,7 +56,7 @@ const CallToAction = () => {
               />
               <Image
                 className="-ml-2 w-[44px]"
-                src="/testimonials/google_review_1.png"
+                src="/testimonials/google_review_8.png"
                 alt=""
                 width={64}
                 height={64}

@@ -1,0 +1,24 @@
+.text-gradient {
+    background: linear-gradient(to right, black, rgb(0, 128, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.dark .text-gradient {
+    background: linear-gradient(to right, white, rgb(25, 118, 210));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+::ng-deep .gm-style div {
+    border: none !important;
+}
+
+.gm-style {
+    border: none !important;
+    background-color: white;
+}

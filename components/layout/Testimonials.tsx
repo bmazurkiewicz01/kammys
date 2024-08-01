@@ -2,8 +2,79 @@ import Image from "next/image";
 import Divider from "../ui/Divider";
 import "./testimonials.css";
 import GoogleIcon from "@mui/icons-material/Google";
+import Link from "next/link";
 
-const Testimonials = () => {
+interface Testimonial {
+  text: string;
+  name: string;
+  role: string;
+  image: string;
+}
+
+const defaultConfig: Testimonial[] = [
+  {
+    text: "“Jestem bardzo zadowolona z usług firmy. Chłopaki znają się na swojej robocie, przeprowadzka przeszła bardzo szybko i sprawnie. Meble sami zabezpieczali przed uszkodzeniem. Uczynni i sympatyczni panowie. Cena również przystępna!”",
+    name: "Żaneta Siwka",
+    role: "Zadowolona klientka",
+    image: "/testimonials/google_review_1.png",
+  },
+  {
+    text: "“W pełni zasłużona, bardzo pozytywna opinia. Pianino, co do którego były obawy, że nie będzie możliwości wyniesienia go z miejsca w którym stało (pierwsze piętro, ciasna klatka schodowa), Panowie przetransportowali na miejsce docelowe.”",
+    name: "Marek Płachta",
+    role: "Zadowolony klient",
+    image: "/testimonials/google_review_2.png",
+  },
+  {
+    text: "“Pełen profesjonalizm. Panowie wykazują się niesamowitą punktualnością, sprawnością i pomysłowością. Zawsze wszystko starannie przewiezione bez najmniejszych uszkodzeń 💪🏾”",
+    name: "Natalia Ostrowska",
+    role: "Zadowolona klientka",
+    image: "/testimonials/google_review_3.png",
+  },
+  {
+    text: "“Wspaniała Firma! Polecam klientom, którzy cenią uczciwość, dokładność i profesjonalizm. KAMMYS - WYBIERZ!!!”",
+    name: "Dorota Meyer",
+    role: "Zadowolona klientka",
+    image: "/testimonials/google_review_4.png",
+  },
+  {
+    text: "“Polecam. Panowie bardzo rzetelni, dokładni i profesjonalni a przy tym bardzo mili. Najlepszy wybór jeżeli chodzi o przeprowadzki. W naszym przypadku transport mebli i bagaży z Gorzowa do Szczecina. Wszystko odpowiednio zabezpieczone.”",
+    name: "Ariel Jaworski",
+    role: "Zadowolony klient",
+    image: "/testimonials/google_review_5.png",
+  },
+  {
+    text: "“Profesjonalna firma przeprowadzkowa. Sprawnie, szybko z głową. Panowie naprawdę spełnili oczekiwania. Właśnie skończyli przeprowadzać biuro z masą mebli i dokumentów. Wykonali swoją pracę, sprawnie i z dbałością o każdy szczegół.”",
+    name: "Agnieszka Jabłońska",
+    role: "Zadowolona klientka",
+    image: "/testimonials/google_review_6.png",
+  },
+  {
+    text: "“Firma Kammys przeprowadzała moich rodziców z Międzyrzecza do Węgorzewa (prawie 600 km). Zlecenie zostało przeprowadzone bardzo profesjonalnie. Od momentu przygotowania oględzin, poprzez wycenę, pakowanie dobytku, przewóz i rozładunek - można było liczyć na pomoc, fachową opiekę i rzetelną informację od właściciela firmy i jego pracowników. Polecam!”",
+    name: "Ewa Bujak",
+    role: "Zadowolona klientka",
+    image: "/testimonials/google_review_7.png",
+  },
+  {
+    text: "“Przeprowadzka na odległość ponad 100 km odbyła się bez zastrzeżeń. Wszystkie meble udało upchnąć w jednym transporcie. Mistrzostwo świata! Dali radę. Żadnych większych uszkodzeń. Firmę Kammys mogę spokojnie polecić.”",
+    name: "Adam Baraniecki",
+    role: "Zadowolony klient",
+    image: "/testimonials/google_review_8.png",
+  },
+  {
+    text: "“Dziękuję firmie Kammys za przyjęcie zlecenia w dniu przeprowadzki :)) Panowie bezpiecznie i szybko przenosili rzeczy i cena nie jest wygórowana. Polecam wszystkim ich usługi.”",
+    name: "Marta Sochaj",
+    role: "Zadowolona klientka",
+    image: "/testimonials/google_review_9.png",
+  },
+];
+
+interface TestimonialsProps {
+  config?: Testimonial[];
+}
+
+const Testimonials: React.FC<TestimonialsProps> = ({
+  config = defaultConfig,
+}) => {
   return (
     <section className="py-12 sm:py-16 lg:py-20">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -37,8 +108,7 @@ const Testimonials = () => {
               title=""
               className="pb-2 text-base font-bold leading-7 text-gray-900 dark:text-[rgb(25,118,210)] transition-all duration-200 border-b-2 border-gray-900 hover:border-gray-600 dark:hover:border-[rgba(25,118,210,0.5)] font-pj focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:text-gray-600"
             >
-              {" "}
-              Sprawdź wszystkie opinie na Google{" "}
+              Sprawdź wszystkie opinie na Google
             </a>
           </div>
 
@@ -48,26 +118,7 @@ const Testimonials = () => {
             </div>
 
             <div className="relative grid max-w-lg grid-cols-1 gap-6 mx-auto md:max-w-none lg:gap-10 md:grid-cols-3">
-              {[
-                {
-                  text: "“Jestem bardzo zadowolona z usług firmy. Chłopaki znają się na swojej robocie, przeprowadzka przeszła bardzo szybko i sprawnie. Meble sami zabezpieczali przed uszkodzeniem. Uczynni i sympatyczni panowie. Cena również przystępna!”",
-                  name: "Żaneta Siwka",
-                  role: "Zadowolona klientka",
-                  image: "/testimonials/google_review_1.png",
-                },
-                {
-                  text: "“W pełni zasłużona, bardzo pozytywna opinia. Pianino, co do którego były obawy, że nie będzie możliwości wyniesienia go z miejsca w którym stało (pierwsze piętro, ciasna klatka schodowa), Panowie przetransportowali na miejsce docelowe.”",
-                  name: "Marek Płachta",
-                  role: "Zadowolony klient",
-                  image: "/testimonials/google_review_2.png",
-                },
-                {
-                  text: "“Pełen profesjonalizm. Panowie wykazują się niesamowitą punktualnością, sprawnością i pomysłowością. Zawsze wszystko starannie przewiezione bez najmniejszych uszkodzeń 💪🏾”",
-                  name: "Natalia Ostrowska",
-                  role: "Zadowolona klientka",
-                  image: "/testimonials/google_review_3.png",
-                },
-              ].map(({ text, name, role, image }, index) => (
+              {config.map(({ text, name, role, image }, index) => (
                 <div key={index} className="flex flex-col overflow-hidden">
                   <div className="flex flex-col justify-between flex-1 p-6 bg-white dark:bg-[rgba(8,15,16,0.9)] border-[1px] border-[rgb(156,204,252)] dark:border-[rgb(2,41,79)] rounded-3xl lg:py-8 lg:px-7">
                     <div className="flex-1">
@@ -85,9 +136,14 @@ const Testimonials = () => {
                             </svg>
                           ))}
                         </div>
-                        <GoogleIcon
-                          className={"self-end text-[rgb(25,118,210)]"}
-                        />
+                        <Link
+                          href={
+                            "https://www.google.com/search?sa=X&sca_esv=1de0a4ee025c56b1&biw=2560&bih=1262&tbm=lcl&sxsrf=ADLYWIJn4Y-vHnvkkA9Osdr4yiJipXjSjQ:1720547962082&q=kammys%20-%20przeprowadzki%20transport%20gorz%C3%B3w%20gorz%C3%B3w%20wielkopolski%20opinie&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDA2MTYysDCyNDcFYkNzcyPjDYyMrxhdshNzcyuLFXQVCoqqUguK8ssTU6qyMxVKihLzigvyi0oU0vOLqg5vLofT5ZmpOdn5Bfk5xUBl-QWZeZmpi1ipYgwAXXkcCqkAAAA&rldimm=10343208297529717723&hl=pl-PL&ved=0CAYQ5foLahcKEwj4gbLRxJqHAxUAAAAAHQAAAAAQCw#lkt=LocalPoiReviews&arid=ChdDSUhNMG9nS0VJQ0FnSUN6alBLT3dBRRAB"
+                          }
+                          className="text-[rgb(25,118,210)] hover:text-[rgb(25,50,255)]"
+                        >
+                          <GoogleIcon />
+                        </Link>
                       </div>
 
                       <blockquote className="flex-1 mt-8">
