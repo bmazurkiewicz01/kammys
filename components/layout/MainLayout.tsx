@@ -1,7 +1,9 @@
 import React, { ReactNode } from "react";
 import Header from "./Header";
-import Footer from "./Footer";
+import dynamic from "next/dynamic";
 import "./mainlayout.css";
+
+const Footer = dynamic(() => import("./Footer"), { ssr: true });
 
 interface MainLayoutProps {
   children: ReactNode;

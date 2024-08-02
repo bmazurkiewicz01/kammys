@@ -1,21 +1,27 @@
-import React, { Suspense } from "react";
-import Divider from "@/components/ui/Divider";
+import dynamic from "next/dynamic";
+import Image from "next/image";
 import MainLayout from "@/components/layout/MainLayout";
 import HeroParallax from "@/components/ui/HeroParallax";
-import CompanyInfo from "@/components/layout/CompanyInfo";
-import dynamic from "next/dynamic";
-import Testimonials from "@/components/layout/Testimonials";
-import Features from "@/components/layout/Features";
 import HeroHeader from "@/components/layout/HeroHeader";
-import Highlights from "@/components/layout/Highlights";
-import Image from "next/image";
-import CallToAction from "@/components/layout/CallToAction";
+import Carousel from "@/components/ui/Carousel";
 
-const GlobeDynamic = dynamic(() => import("@/components/ui/GlobeDynamic"), {
-  ssr: false,
+const CompanyInfo = dynamic(() => import("@/components/layout/CompanyInfo"), {
+  ssr: true,
 });
 
-const Carousel = dynamic(() => import("@/components/ui/Carousel"), {
+const Features = dynamic(() => import("@/components/layout/Features"), {
+  ssr: true,
+});
+
+const Highlights = dynamic(() => import("@/components/layout/Highlights"), {
+  ssr: true,
+});
+
+const Testimonials = dynamic(() => import("@/components/layout/Testimonials"), {
+  ssr: true,
+});
+
+const CallToAction = dynamic(() => import("@/components/layout/CallToAction"), {
   ssr: true,
 });
 
@@ -58,25 +64,6 @@ const Home: React.FC = () => {
       </section>
       <section>
         <Highlights />
-      </section>
-      <section className="hidden sm:block py-8">
-        <div className="flex flex-row items-center pb-4 justify-center h-[70vh] my-8 md:h-auto dark:bg-[rgb(8,15,16)] bg-white relative max-w-[1200px] mx-auto w-full">
-          <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[60rem] px-4">
-            <h2 className="text-center text-3xl md:text-4xl dark:font-bold text-black dark:text-white mb-2">
-              Łączymy Świat, Przeprowadzka po Przeprowadzce 🌍
-            </h2>
-            <Divider />
-            <p className="text-center text-base md:text-lg max-w-3xl font-normal text-neutral-700 dark:text-neutral-200 mt-2 mx-auto">
-              Od 1999 roku KAMMYS jest zaufaną marką w branży przeprowadzek i
-              transportu. Z silną obecnością w Gorzowie Wielkopolskim i rozległą
-              siecią w całej Europie, zapewniamy niezawodne, wydajne i
-              profesjonalne usługi dostosowane do Twoich potrzeb.
-            </p>
-            <Suspense fallback={<div>Loading...</div>}>
-              <GlobeDynamic />
-            </Suspense>
-          </div>
-        </div>
       </section>
       <section>
         <Testimonials />

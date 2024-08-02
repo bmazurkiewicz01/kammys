@@ -3,8 +3,12 @@ import lightLogo from "../../public/logo-without-text.svg";
 import ThemeButton from "../ui/ThemeButton";
 import Link from "next/link";
 import Image from "next/image";
-import HeaderClient from "./HeaderClient";
+import dynamic from "next/dynamic";
 import "./header.css";
+
+const HeaderClient = dynamic(() => import("@/components/layout/HeaderClient"), {
+  ssr: false,
+});
 
 const Header: React.FC = () => {
   return (
