@@ -102,7 +102,7 @@ const Features = () => {
             </p>
             <Link
               className="text-[rgb(25,118,210)] inline-flex items-center transition-all duration-250 hover:translate-x-[2px] hover:underline font-bold"
-              href={"/oferta"}
+              href={"/oferta-przeprowadzki-transport"}
               passHref
             >
               <span>Dowiedz się więcej</span>
@@ -151,7 +151,7 @@ const Features = () => {
                   </p>
                   <Link
                     className="text-[rgb(25,118,210)] inline-flex items-center transition-all duration-250 hover:translate-x-[2px] hover:underline font-bold"
-                    href={"/oferta"}
+                    href={"/oferta-przeprowadzki-transport"}
                     passHref
                   >
                     <span>Dowiedz się więcej</span>

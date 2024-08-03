@@ -52,7 +52,7 @@ const Header: React.FC = () => {
               </Link>
               <Link href="/przeprowadzki" passHref>
                 <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full">
-                  Przeprowadzki
+                  Realizacje
                 </li>
               </Link>
               <Link href="/kontakt" passHref>
