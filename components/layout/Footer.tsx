@@ -62,7 +62,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
                 <ul>
                   <li className="mb-1">
                     <Link
-                      href="/oferta"
+                      href="/oferta-przeprowadzki-transport"
                       className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
                     >
                       Przeprowadzki dla firm
@@ -70,7 +70,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
                   </li>
                   <li className="mb-1">
                     <Link
-                      href="/oferta"
+                      href="/oferta-przeprowadzki-transport"
                       className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
                     >
                       Przeprowadzki domów
@@ -78,7 +78,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
                   </li>
                   <li className="mb-1">
                     <Link
-                      href="/oferta"
+                      href="/oferta-przeprowadzki-transport"
                       className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
                     >
                       Pianina i fortepiany
@@ -86,7 +86,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
                   </li>
                   <li className="mb-1">
                     <Link
-                      href="/oferta"
+                      href="/oferta-przeprowadzki-transport"
                       className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 transition duration-150 ease-in-out"
                     >
                       Przeprowadzki międzynarodowe

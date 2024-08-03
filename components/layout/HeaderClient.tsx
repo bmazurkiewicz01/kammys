@@ -112,7 +112,7 @@ const HeaderClient: React.FC = () => {
             passHref
           >
             <li className="hover:bg-[rgba(0,0,0,0.04)] dark:hover:bg-[rgba(255,255,255,0.08)] px-[12px] py-[6px] rounded-full w-full">
-              Przeprowadzki
+              Realizacje
             </li>
           </Link>
           <Link href="/kontakt" className="w-full" onClick={closeMenu} passHref>
