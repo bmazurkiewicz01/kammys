@@ -18,7 +18,11 @@ const About: React.FC = () => {
   return (
     <MainLayout>
       <section className="w-full flex flex-col justify-center items-center bg-gradient-to-b from-[#b4d5f9] to-white dark:from-[rgb(2,41,79)] dark:to-[rgba(9,14,16,0)] bg-no-repeat gradient-bg-size">
-        <AboutHeroSection />
+        <AboutHeroSection
+          headerText="Profesjonalne przeprowadzki doskonale dopasowane do twoich potrzeb i wymagań"
+          paragraphText="Nasza oferta"
+          imgSrc="/hero/img7.jpg"
+        />
       </section>
       <section className="w-full flex flex-col justify-center items-center my-12">
         <InfoCards />

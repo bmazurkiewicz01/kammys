@@ -42,6 +42,9 @@ const config: Config = {
         "dark-card-gradient":
           "linear-gradient(rgb(9, 14, 16), rgba(19, 27, 32, 0.5))",
       },
+      gridTemplateColumns: {
+        "auto-fit-minmax": "repeat(auto-fit, minmax(15rem, 1fr))",
+      },
     },
     fontFamily: {
       sans: ["Inter", "sans-serif"],
