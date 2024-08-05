@@ -2,17 +2,26 @@ import { ArrowRight } from "@mui/icons-material";
 import Link from "next/link";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 
-const AboutHeroSection = () => {
+interface AboutHeroSectionProps {
+  headerText: string;
+  paragraphText: string;
+  imgSrc: string;
+}
+
+const AboutHeroSection: React.FC<AboutHeroSectionProps> = ({
+  headerText,
+  paragraphText,
+  imgSrc,
+}) => {
   return (
     <div className="max-w-[1200px] w-full pt-14 md:pt-28 px-4 mt-10 2xl:pt-[80px] flex flex-col justify-center items-center">
       <div className="w-full flex flex-col md:flex-row">
         <div className="w-full md:w-[50%] flex flex-col gap-6 md:gap-10 md:pr-10 md:pt-20 pb-10 md:pb-20">
           <p className="text-[18px] ml-1 text-[rgb(25,90,210)] dark:text-[rgb(25,118,255)]">
-            Nasza oferta
+            {paragraphText}
           </p>
           <h1 className="text-3xl md:text-5xl text-[rgb(31,41,55)] dark:text-white">
-            Profesjonalne przeprowadzki doskonale dopasowane do twoich potrzeb i
-            wymagań
+            {headerText}
           </h1>
           <div className="border-l border-[rgba(50,48,48,0.20)] dark:border-[rgba(255,255,255,0.20)] w-full flex flex-row items-center gap-3">
             <div className="">
@@ -39,7 +48,10 @@ const AboutHeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="w-full md:w-[50%] min-h-[300px] md:min-h-0 flex flex-col bg-[url('/hero/img7.jpg')] bg-center bg-cover md:rounded-br-[150px] hover:bg-[rgba(25,118,210,0.04)] hover:shadow-[0_0_24px_#CEE5FD] dark:hover:shadow-[0_0_24px_#02294F]"></div>
+        <div
+          className={`w-full md:w-[50%] min-h-[300px] md:min-h-0 flex flex-col bg-center bg-cover md:rounded-br-[150px] hover:bg-[rgba(25,118,210,0.04)] hover:shadow-[0_0_24px_#CEE5FD] dark:hover:shadow-[0_0_24px_#02294F]`}
+          style={{ backgroundImage: `url(${imgSrc})` }}
+        ></div>
       </div>
     </div>
   );
