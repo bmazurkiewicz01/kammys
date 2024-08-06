@@ -17,6 +17,9 @@ const CallToAction = dynamic(() => import("@/components/layout/CallToAction"), {
 
 export const metadata: Metadata = {
   title: "Oferta",
+  alternates: {
+    canonical: "https://przeprowadzkigorzow.com/oferta-przeprowadzki-transport",
+  },
 };
 
 const Offer: React.FC = () => {

@@ -18,6 +18,9 @@ const ArrowRight = dynamic(
 
 export const metadata: Metadata = {
   title: "Kontakt",
+  alternates: {
+    canonical: "https://przeprowadzkigorzow.com/kontakt",
+  },
 };
 
 const Contact: React.FC = () => {

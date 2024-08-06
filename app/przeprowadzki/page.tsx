@@ -10,6 +10,9 @@ const Gallery = dynamic(() => import("@/components/ui/Gallery"), {
 
 export const metadata: Metadata = {
   title: "Realizacje",
+  alternates: {
+    canonical: "https://przeprowadzkigorzow.com/przeprowadzki",
+  },
 };
 
 const Realizations: React.FC = () => {
