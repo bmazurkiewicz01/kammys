@@ -59,6 +59,24 @@ const images: Image[] = [
   {
     src: "/hero/img14.jpg",
   },
+  {
+    src: "/hero/img15.jpeg",
+  },
+  {
+    src: "/hero/img16.jpeg",
+  },
+  {
+    src: "/hero/img17.jpeg",
+  },
+  {
+    src: "/hero/img18.jpeg",
+  },
+  {
+    src: "/hero/img19.jpeg",
+  },
+  {
+    src: "/hero/img20.jpeg",
+  },
 ];
 
 const Gallery = () => {
@@ -70,7 +88,7 @@ const Gallery = () => {
 
   return (
     <div className="w-full max-w-[1200px] px-4 mt-12 flex flex-col justify-center items-center">
-      <div className="w-full grid grid-cols-auto-fit-minmax gap-2">
+      <div className="w-full grid grid-cols-auto-fit-minmax gap-4 md:gap-2">
         {images.map((image, index) => (
           <div
             key={index}

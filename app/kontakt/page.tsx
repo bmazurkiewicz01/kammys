@@ -15,7 +15,7 @@ const ArrowRight = dynamic(
   { ssr: false }
 );
 
-const About: React.FC = () => {
+const Contact: React.FC = () => {
   return (
     <MainLayout>
       <section className="w-full flex flex-col justify-center items-center bg-gradient-to-b from-[#b4d5f9] to-white dark:from-[rgb(2,41,79)] dark:to-[rgba(9,14,16,0)] bg-no-repeat gradient-bg-size">
@@ -147,4 +147,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About;
+export default Contact;
