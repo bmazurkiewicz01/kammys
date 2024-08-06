@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Profesjonalne i kompleksowe przeprowadzki w Gorzowie Wielkopolskim i okolicach. Konkurencyjne ceny, fachowa obsługa, transport do 1,5 tony. Zadzwoń: 667903199",
   alternates: {
-    canonical: "https://przeprowadzkigorzow.com",
+    canonical: "/",
   },
 };
 
