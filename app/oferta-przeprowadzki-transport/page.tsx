@@ -1,6 +1,7 @@
 import MainLayout from "@/components/layout/MainLayout";
 import AboutHeroSection from "@/components/layout/AboutHeroSection";
 import dynamic from "next/dynamic";
+import { Metadata } from "next";
 
 const InfoCards = dynamic(() => import("@/components/layout/InfoCards"), {
   ssr: true,
@@ -13,6 +14,10 @@ const Services = dynamic(() => import("@/components/layout/Services"), {
 const CallToAction = dynamic(() => import("@/components/layout/CallToAction"), {
   ssr: true,
 });
+
+export const metadata: Metadata = {
+  title: "Oferta",
+};
 
 const Offer: React.FC = () => {
   return (

@@ -9,11 +9,16 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import Testimonials from "@/components/layout/Testimonials";
 import dynamic from "next/dynamic";
 import "./contact.css";
+import { Metadata } from "next";
 
 const ArrowRight = dynamic(
   () => import("@/components/ui/Icons").then((mod) => mod.ArrowRight),
   { ssr: false }
 );
+
+export const metadata: Metadata = {
+  title: "Kontakt",
+};
 
 const Contact: React.FC = () => {
   return (

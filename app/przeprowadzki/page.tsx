@@ -2,10 +2,15 @@ import MainLayout from "@/components/layout/MainLayout";
 import CallToAction from "@/components/layout/CallToAction";
 import dynamic from "next/dynamic";
 import AboutHeroSection from "@/components/layout/AboutHeroSection";
+import { Metadata } from "next";
 
 const Gallery = dynamic(() => import("@/components/ui/Gallery"), {
   ssr: false,
 });
+
+export const metadata: Metadata = {
+  title: "Realizacje",
+};
 
 const Realizations: React.FC = () => {
   return (
