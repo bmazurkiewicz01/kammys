@@ -2,12 +2,17 @@ import MainLayout from "@/components/layout/MainLayout";
 import CallToAction from "@/components/layout/CallToAction";
 import dynamic from "next/dynamic";
 import AboutHeroSection from "@/components/layout/AboutHeroSection";
+import { Metadata } from "next";
 
 const Gallery = dynamic(() => import("@/components/ui/Gallery"), {
   ssr: false,
 });
 
-const About: React.FC = () => {
+export const metadata: Metadata = {
+  title: "Realizacje",
+};
+
+const Realizations: React.FC = () => {
   return (
     <MainLayout>
       <section className="w-full pb-20 md:pb-32 flex flex-col justify-center items-center bg-gradient-to-b from-[#b4d5f9] to-white dark:from-[rgb(2,41,79)] dark:to-[rgba(9,14,16,0)] bg-no-repeat gradient-bg-size">
@@ -35,4 +40,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About;
+export default Realizations;

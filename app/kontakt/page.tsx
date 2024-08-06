@@ -9,13 +9,18 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import Testimonials from "@/components/layout/Testimonials";
 import dynamic from "next/dynamic";
 import "./contact.css";
+import { Metadata } from "next";
 
 const ArrowRight = dynamic(
   () => import("@/components/ui/Icons").then((mod) => mod.ArrowRight),
   { ssr: false }
 );
 
-const About: React.FC = () => {
+export const metadata: Metadata = {
+  title: "Kontakt",
+};
+
+const Contact: React.FC = () => {
   return (
     <MainLayout>
       <section className="w-full flex flex-col justify-center items-center bg-gradient-to-b from-[#b4d5f9] to-white dark:from-[rgb(2,41,79)] dark:to-[rgba(9,14,16,0)] bg-no-repeat gradient-bg-size">
@@ -147,4 +152,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About;
+export default Contact;
