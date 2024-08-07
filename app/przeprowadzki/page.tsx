@@ -13,6 +13,22 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://przeprowadzkigorzow.com/przeprowadzki",
   },
+  openGraph: {
+    url: "https://przeprowadzkigorzow.com/przeprowadzki",
+    title:
+      "Realizacje | Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
+    type: "website",
+    locale: "pl_PL",
+    siteName: "Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
+    images: [
+      {
+        url: "https://przeprowadzkigorzow.com/opengraph-image.png",
+        width: 1200,
+        height: 272,
+        alt: "Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
+      },
+    ],
+  },
 };
 
 const Realizations: React.FC = () => {

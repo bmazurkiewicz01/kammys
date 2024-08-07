@@ -6,6 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://przeprowadzkigorzow.com/"),
   title: {
     default: "Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
     template: "%s | Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
@@ -14,6 +15,20 @@ export const metadata: Metadata = {
     "Profesjonalne i kompleksowe przeprowadzki w Gorzowie Wielkopolskim i okolicach. Konkurencyjne ceny, fachowa obsługa, transport do 1,5 tony. Zadzwoń: 667903199",
   alternates: {
     canonical: "https://przeprowadzkigorzow.com/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "pl_PL",
+    url: "https://przeprowadzkigorzow.com/",
+    siteName: "Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
+    images: [
+      {
+        url: "https://przeprowadzkigorzow.com/opengraph-image.png",
+        width: 1200,
+        height: 272,
+        alt: "Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
+      },
+    ],
   },
 };
 

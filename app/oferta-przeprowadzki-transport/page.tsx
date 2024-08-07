@@ -20,6 +20,21 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://przeprowadzkigorzow.com/oferta-przeprowadzki-transport",
   },
+  openGraph: {
+    url: "https://przeprowadzkigorzow.com/oferta-przeprowadzki-transport",
+    title: "Oferta | Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
+    type: "website",
+    locale: "pl_PL",
+    siteName: "Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
+    images: [
+      {
+        url: "https://przeprowadzkigorzow.com/opengraph-image.png",
+        width: 1200,
+        height: 272,
+        alt: "Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
+      },
+    ],
+  },
 };
 
 const Offer: React.FC = () => {
