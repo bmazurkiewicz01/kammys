@@ -22,16 +22,17 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "https://przeprowadzkigorzow.com/oferta-przeprowadzki-transport",
-    title: "Oferta | Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
+    title:
+      "Oferta | KAMMYS - Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
     type: "website",
     locale: "pl_PL",
-    siteName: "Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
+    siteName: "KAMMYS - Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
     images: [
       {
-        url: "https://przeprowadzkigorzow.com/opengraph-image.png",
+        url: "https://przeprowadzkigorzow.com/opengraph-image.jpg",
         width: 1200,
         height: 272,
-        alt: "Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
+        alt: "KAMMYS - Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
       },
     ],
   },

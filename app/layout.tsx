@@ -8,8 +8,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://przeprowadzkigorzow.com/"),
   title: {
-    default: "Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
-    template: "%s | Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
+    default: "KAMMYS - Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
+    template:
+      "%s | KAMMYS - Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
   },
   description:
     "Profesjonalne i kompleksowe przeprowadzki w Gorzowie Wielkopolskim i okolicach. Konkurencyjne ceny, fachowa obsługa, transport do 1,5 tony. Zadzwoń: 667903199",
@@ -20,13 +21,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pl_PL",
     url: "https://przeprowadzkigorzow.com/",
-    siteName: "Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
+    siteName: "KAMMYS - Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
     images: [
       {
-        url: "https://przeprowadzkigorzow.com/opengraph-image.png",
+        url: "https://przeprowadzkigorzow.com/opengraph-image.jpg",
         width: 1200,
         height: 272,
-        alt: "Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
+        alt: "KAMMYS - Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
       },
     ],
   },
