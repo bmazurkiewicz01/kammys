@@ -85,7 +85,7 @@ export default function RootLayout({
                 },
                 {
                   "@type": "ContactPoint",
-                  email: "kontakt@przeprowadzkigorzow.com",
+                  email: "kamysprzeprowadzki@tlen.pl",
                   contactType: "customer service",
                   availableLanguage: ["Polish"],
                 },
