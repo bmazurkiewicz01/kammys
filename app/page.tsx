@@ -146,18 +146,18 @@ const products = [
 ];
 
 const companyInfoConfig = {
-  title: "Przeprowadzki i Usługi Transportowe",
+  title: "Przeprowadzki Gorzów Wielkopolski i Usługi Transportowe",
   items: [
     {
-      title: "Kompleksowe Przeprowadzki",
+      title: "Kompleksowe Przeprowadzki Gorzów Wielkopolski",
       description:
-        "Od ponad 26 lat świadczymy profesjonalne i kompleksowe usługi przeprowadzkowe na terenie całej Europy. Nasza doświadczona ekipa tragarzy zadba o bezpieczny transport Twojego mienia.",
+        "Od ponad 26 lat świadczymy profesjonalne i kompleksowe usługi przeprowadzkowe na terenie Gorzowa Wielkopolskiego oraz całej Europy. Nasza doświadczona ekipa tragarzy zadba o bezpieczny transport Twojego mienia. Wybierz naszą firmę przeprowadzkową w Gorzowie Wielkopolskim i ciesz się bezstresową przeprowadzką.",
       img: "/hero/img12.jpg",
     },
     {
-      title: "Transport Międzynarodowy",
+      title: "Międzynarodowy Transport z Gorzowa Wielkopolskiego",
       description:
-        "Organizujemy przeprowadzki do Anglii, Skandynawii, Niemiec, Francji, Holandii oraz innych państw. Gwarantujemy bezpieczny i terminowy przewóz Twojego dobytku.",
+        "Organizujemy przeprowadzki z Gorzowa Wielkopolskiego do Anglii, Skandynawii, Niemiec, Francji, Holandii oraz innych krajów. Gwarantujemy bezpieczny i terminowy przewóz Twojego dobytku. Skorzystaj z naszych usług transportowych z Gorzowa Wielkopolskiego i zyskaj spokój o swój majątek.",
       img: "/hero/img6.jpg",
     },
   ],
