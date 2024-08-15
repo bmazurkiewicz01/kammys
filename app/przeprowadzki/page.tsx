@@ -3,6 +3,9 @@ import CallToAction from "@/components/layout/CallToAction";
 import dynamic from "next/dynamic";
 import AboutHeroSection from "@/components/layout/AboutHeroSection";
 import { Metadata } from "next";
+import Locations from "@/components/layout/Locations";
+import Image from "next/image";
+import Testimonials from "@/components/layout/Testimonials";
 
 const Gallery = dynamic(() => import("@/components/ui/Gallery"), {
   ssr: false,
@@ -31,6 +34,14 @@ export const metadata: Metadata = {
   },
 };
 
+const configLocations = {
+  preTitle: "Zaufaj naszym specjalistom",
+  title: "Zrealizowane Projekty - Przeprowadzki Gorzów Wielkopolski",
+  description:
+    "KAMMYS z dumą przedstawia galerię zrealizowanych projektów przeprowadzek, które perfekcyjnie odpowiadają Twoim oczekiwaniom i standardom. Jako lider w branży, nasze usługi przeprowadzek w Gorzowie Wielkopolskim oraz w okolicach gwarantują pełne zadowolenie klientów. Zobacz, jak KAMMYS pomógł licznym osobom i firmom w ich bezstresowych przeprowadzkach.",
+  locationTitle: "Zrealizowane projekty przeprowadzek:",
+};
+
 const Realizations: React.FC = () => {
   return (
     <MainLayout>
@@ -40,6 +51,17 @@ const Realizations: React.FC = () => {
           paragraphText="Nasze realizacje"
           imgSrc="/hero/img10.jpg"
         />
+      </section>
+      <section>
+        <Locations config={configLocations}>
+          <Image
+            src="/hero/img6.jpg"
+            width={600}
+            height={500}
+            alt="Przeprowadzka w Gorzowie Wielkopolskim"
+            className="h-6/6 max-h-[300px] 2md:max-h-[600px] w-[600px] rounded-lg shadow-lg 2md:ml-auto object-cover"
+          />
+        </Locations>
       </section>
       <section className="w-full flex flex-col justify-center items-center pt-20">
         <h2 className="text-3xl mb-4 md:text-[3rem] text-[rgb(31,41,55)] dark:text-white font-bold text-left md:text-center px-4 leading-[1.1]">
@@ -51,6 +73,9 @@ const Realizations: React.FC = () => {
           Nasza galeria zrealizowanych przeprowadzek i transportów
         </p>
         <Gallery />
+      </section>
+      <section className="md:mt-20">
+        <Testimonials />
       </section>
       <section className="w-full mt-24 mb-20">
         <CallToAction />

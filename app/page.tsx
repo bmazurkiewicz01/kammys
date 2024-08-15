@@ -4,6 +4,7 @@ import MainLayout from "@/components/layout/MainLayout";
 import HeroParallax from "@/components/ui/HeroParallax";
 import HeroHeader from "@/components/layout/HeroHeader";
 import Carousel from "@/components/ui/Carousel";
+import Locations from "@/components/layout/Locations";
 
 const CompanyInfo = dynamic(() => import("@/components/layout/CompanyInfo"), {
   ssr: true,
@@ -62,7 +63,10 @@ const Home: React.FC = () => {
       <section>
         <Features />
       </section>
-      <section>
+      <section className="md:py-20">
+        <Locations />
+      </section>
+      <section className="py-10">
         <Highlights />
       </section>
       <section>

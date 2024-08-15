@@ -15,6 +15,21 @@ export const metadata: Metadata = {
   },
   description:
     "KAMMYS oferuje profesjonalne i kompleksowe przeprowadzki w Gorzowie Wielkopolskim i okolicach. Konkurencyjne ceny, fachowa obsługa. Zadzwoń: 66790319",
+  keywords: [
+    "Przeprowadzki Gorzów",
+    "KAMMYS Przeprowadzki",
+    "Przeprowadzki Gorzów Wielkopolski",
+    "Transport 667-903-199",
+    "Przeprowadzki Międzyrzecz",
+    "Przeprowadzki Myślibórz",
+    "Transport Zielona Góra",
+    "Przeprowadzki Kostrzyn nad Odrą",
+    "Transport Szczecin",
+    "Transport Warszawa",
+    "Usługi transportowe Gorzów",
+    "Taxi bagażowe Gorzów",
+  ],
+  robots: "index, follow",
   alternates: {
     canonical: "https://przeprowadzkigorzow.com/",
   },

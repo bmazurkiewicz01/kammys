@@ -23,14 +23,14 @@ const CallToAction = () => {
       <Image
         className="absolute top-0 left-0 block dark:hidden"
         src="/cta/blue-light-left-top.png"
-        alt=""
+        alt="Blue light color for page decoration"
         width={387}
         height={577}
       />
       <Image
         className="absolute top-0 right-0 block dark:hidden"
         src="/cta/orange-right-bottom.png"
-        alt=""
+        alt="Orange color for page decoration"
         width={464}
         height={764}
       />
@@ -50,35 +50,35 @@ const CallToAction = () => {
               <Image
                 src="/testimonials/google_review_7.png"
                 className="w-[44px]"
-                alt=""
+                alt="Google review avatar"
                 width={64}
                 height={64}
               />
               <Image
                 className="-ml-2 w-[44px]"
                 src="/testimonials/google_review_8.png"
-                alt=""
+                alt="Google review avatar"
                 width={64}
                 height={64}
               />
               <Image
                 className="-ml-2 w-[44px]"
                 src="/testimonials/google_review_2.png"
-                alt=""
+                alt="Google review avatar"
                 width={64}
                 height={64}
               />
               <Image
                 className="-ml-2 w-[44px]"
                 src="/testimonials/google_review_3.png"
-                alt=""
+                alt="Google review avatar"
                 width={64}
                 height={64}
               />
               <Image
                 className="-ml-2 w-[44px]"
                 src="/testimonials/google_review_1.png"
-                alt=""
+                alt="Google review avatar"
                 width={64}
                 height={64}
               />
