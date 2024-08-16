@@ -18,6 +18,8 @@ const ArrowRight = dynamic(
 
 export const metadata: Metadata = {
   title: "Kontakt",
+  description:
+    "Profesjonalne przeprowadzki w Gorzowie Wielkopolskim i okolicach. Firma KAMMYS oferuje bezpieczne, szybkie i niedrogie usługi. Zapraszamy do kontaktu: 66790319.",
   alternates: {
     canonical: "https://przeprowadzkigorzow.com/kontakt",
   },

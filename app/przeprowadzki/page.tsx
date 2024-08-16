@@ -13,6 +13,8 @@ const Gallery = dynamic(() => import("@/components/ui/Gallery"), {
 
 export const metadata: Metadata = {
   title: "Realizacje",
+  description:
+    "Szukasz sprawdzonej firmy do przeprowadzki w Gorzowie Wielkopolskim? KAMMYS zapewnia szybkie, bezpieczne i profesjonalne usługi przeprowadzkowe.",
   alternates: {
     canonical: "https://przeprowadzkigorzow.com/przeprowadzki",
   },
@@ -47,7 +49,7 @@ const Realizations: React.FC = () => {
     <MainLayout>
       <section className="w-full pb-20 md:pb-32 flex flex-col justify-center items-center bg-gradient-to-b from-[#b4d5f9] to-white dark:from-[rgb(2,41,79)] dark:to-[rgba(9,14,16,0)] bg-no-repeat gradient-bg-size">
         <AboutHeroSection
-          headerText="Zrealizowane projekty perfekcyjnie odpowiadające Twoim oczekiwaniom i standardom"
+          headerText="Sprawdzone Przeprowadzki w Gorzowie Wielkopolskim – Wybierz KAMMYS"
           paragraphText="Nasze realizacje"
           imgSrc="/hero/img10.jpg"
         />

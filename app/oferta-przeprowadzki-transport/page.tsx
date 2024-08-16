@@ -19,6 +19,8 @@ const CallToAction = dynamic(() => import("@/components/layout/CallToAction"), {
 
 export const metadata: Metadata = {
   title: "Oferta",
+  description:
+    "Zorganizuj swoją przeprowadzkę z KAMMYS w Gorzowie Wielkopolskim. Doświadczona ekipa, niezawodny sprzęt i konkurencyjne ceny. Zadzwoń już dziś: 66790319.",
   alternates: {
     canonical: "https://przeprowadzkigorzow.com/oferta-przeprowadzki-transport",
   },
@@ -53,7 +55,7 @@ const Offer: React.FC = () => {
     <MainLayout>
       <section className="w-full flex flex-col justify-center items-center bg-gradient-to-b from-[#b4d5f9] to-white dark:from-[rgb(2,41,79)] dark:to-[rgba(9,14,16,0)] bg-no-repeat gradient-bg-size">
         <AboutHeroSection
-          headerText="Profesjonalne przeprowadzki doskonale dopasowane do twoich potrzeb i wymagań"
+          headerText="Profesjonalne przeprowadzki doskonale dopasowane do twoich potrzeb"
           paragraphText="Nasza oferta"
           imgSrc="/hero/img7.jpg"
         />

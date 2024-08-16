@@ -9,9 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://przeprowadzkigorzow.com/"),
   title: {
-    default: "KAMMYS - Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
+    default: "KAMMYS Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
     template:
-      "%s | KAMMYS - Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
+      "%s | KAMMYS Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
   },
   description:
     "KAMMYS oferuje profesjonalne i kompleksowe przeprowadzki w Gorzowie Wielkopolskim i okolicach. Konkurencyjne ceny, fachowa obsługa. Zadzwoń: 66790319",
@@ -128,7 +128,6 @@ export default function RootLayout({
               review: [
                 {
                   "@type": "Review",
-                  author: "Żaneta Siwka",
                   description:
                     "Jestem bardzo zadowolona z usług firmy. Chłopaki znają się na swojej robocie, przeprowadzka przeszła bardzo szybko i sprawnie. Meble sami zabezpieczali przed uszkodzeniem. Uczynni i sympatyczni panowie. Cena również przystępna!",
                   name: "Profesjonalna obsługa",
@@ -141,7 +140,6 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Review",
-                  author: "Marek Płachta",
                   description:
                     "W pełni zasłużona, bardzo pozytywna opinia. Pianino, co do którego były obawy, że nie będzie możliwości wyniesienia go z miejsca w którym stało (pierwsze piętro, ciasna klatka schodowa), Panowie przetransportowali na miejsce docelowe.",
                   name: "Doskonała obsługa",
@@ -154,7 +152,6 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Review",
-                  author: "Natalia Ostrowska",
                   description:
                     "Pełen profesjonalizm. Panowie wykazują się niesamowitą punktualnością, sprawnością i pomysłowością. Zawsze wszystko starannie przewiezione bez najmniejszych uszkodzeń 💪🏾",
                   name: "Bardzo sprawnie",
@@ -167,7 +164,6 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Review",
-                  author: "Dorota Meyer",
                   description:
                     "Wspaniała Firma! Polecam klientom, którzy cenią uczciwość, dokładność i profesjonalizm. KAMMYS - WYBIERZ!!!",
                   name: "Uczciwa i dokładna firma",
@@ -180,7 +176,6 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Review",
-                  author: "Ariel Jaworski",
                   description:
                     "Polecam. Panowie bardzo rzetelni, dokładni i profesjonalni a przy tym bardzo mili. Najlepszy wybór jeżeli chodzi o przeprowadzki. W naszym przypadku transport mebli i bagaży z Gorzowa do Szczecina. Wszystko odpowiednio zabezpieczone.",
                   name: "Rzetelna usługa",
@@ -193,7 +188,6 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Review",
-                  author: "Agnieszka Jabłońska",
                   description:
                     "Profesjonalna firma przeprowadzkowa. Sprawnie, szybko z głową. Panowie naprawdę spełnili oczekiwania. Właśnie skończyli przeprowadzać biuro z masą mebli i dokumentów. Wykonali swoją pracę, sprawnie i z dbałością o każdy szczegół.",
                   name: "Sprawna przeprowadzka biura",
@@ -206,7 +200,6 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Review",
-                  author: "Ewa Bujak",
                   description:
                     "Firma Kammys przeprowadzała moich rodziców z Międzyrzecza do Węgorzewa (prawie 600 km). Zlecenie zostało przeprowadzone bardzo profesjonalnie. Od momentu przygotowania oględzin, poprzez wycenę, pakowanie dobytku, przewóz i rozładunek - można było liczyć na pomoc, fachową opiekę i rzetelną informację od właściciela firmy i jego pracowników. Polecam!",
                   name: "Profesjonalna przeprowadzka na długi dystans",
@@ -219,7 +212,6 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Review",
-                  author: "Adam Baraniecki",
                   description:
                     "Przeprowadzka na odległość ponad 100 km odbyła się bez zastrzeżeń. Wszystkie meble udało upchnąć w jednym transporcie. Mistrzostwo świata! Dali radę. Żadnych większych uszkodzeń. Firmę Kammys mogę spokojnie polecić.",
                   name: "Przeprowadzka na 100 km bez zastrzeżeń",
@@ -232,7 +224,6 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Review",
-                  author: "Marta Sochaj",
                   description:
                     "Dziękuję firmie Kammys za przyjęcie zlecenia w dniu przeprowadzki :)) Panowie bezpiecznie i szybko przenosili rzeczy i cena nie jest wygórowana. Polecam wszystkim ich usługi.",
                   name: "Szybka i bezpieczna przeprowadzka",
