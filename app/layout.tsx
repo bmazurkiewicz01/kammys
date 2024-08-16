@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "%s | KAMMYS Przeprowadzki Gorzów Wielkopolski Transport, 667903199",
   },
   description:
-    "KAMMYS oferuje profesjonalne i kompleksowe przeprowadzki w Gorzowie Wielkopolskim i okolicach. Konkurencyjne ceny, fachowa obsługa. Zadzwoń: 66790319",
+    "KAMMYS Przeprowadzki Gorzów Wielkopolski. Oferujemy kompleksowe przeprowadzki oraz transport na terenie całej Europy. Zadzwoń już dziś: 66790319.",
   keywords: [
     "Przeprowadzki Gorzów",
     "KAMMYS Przeprowadzki",
