@@ -137,6 +137,10 @@ export default function RootLayout({
                     ratingValue: "5",
                     worstRating: "1",
                   },
+                  author: {
+                    "@type": "Person",
+                    name: "Żaneta Siwka",
+                  },
                 },
                 {
                   "@type": "Review",
@@ -148,6 +152,10 @@ export default function RootLayout({
                     bestRating: "5",
                     ratingValue: "5",
                     worstRating: "1",
+                  },
+                  author: {
+                    "@type": "Person",
+                    name: "Marek Płachta",
                   },
                 },
                 {
@@ -161,6 +169,10 @@ export default function RootLayout({
                     ratingValue: "5",
                     worstRating: "1",
                   },
+                  author: {
+                    "@type": "Person",
+                    name: "Natalia Ostrowska",
+                  },
                 },
                 {
                   "@type": "Review",
@@ -172,6 +184,10 @@ export default function RootLayout({
                     bestRating: "5",
                     ratingValue: "5",
                     worstRating: "1",
+                  },
+                  author: {
+                    "@type": "Person",
+                    name: "Dorota Meyer",
                   },
                 },
                 {
@@ -185,6 +201,10 @@ export default function RootLayout({
                     ratingValue: "5",
                     worstRating: "1",
                   },
+                  author: {
+                    "@type": "Person",
+                    name: "Ariel Jaworski",
+                  },
                 },
                 {
                   "@type": "Review",
@@ -196,6 +216,10 @@ export default function RootLayout({
                     bestRating: "5",
                     ratingValue: "5",
                     worstRating: "1",
+                  },
+                  author: {
+                    "@type": "Person",
+                    name: "Agnieszka Jabłońska",
                   },
                 },
                 {
@@ -209,6 +233,10 @@ export default function RootLayout({
                     ratingValue: "5",
                     worstRating: "1",
                   },
+                  author: {
+                    "@type": "Person",
+                    name: "Ewa Bujak",
+                  },
                 },
                 {
                   "@type": "Review",
@@ -221,6 +249,10 @@ export default function RootLayout({
                     ratingValue: "5",
                     worstRating: "1",
                   },
+                  author: {
+                    "@type": "Person",
+                    name: "Adam Baraniecki",
+                  },
                 },
                 {
                   "@type": "Review",
@@ -232,6 +264,10 @@ export default function RootLayout({
                     bestRating: "5",
                     ratingValue: "5",
                     worstRating: "1",
+                  },
+                  author: {
+                    "@type": "Person",
+                    name: "Marta Sochaj",
                   },
                 },
               ],
